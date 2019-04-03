@@ -3,6 +3,9 @@
 Instructor: Sergio Rey  
 Tuesdays: 5:40-8:30PM  
 CHASS INTS-N Room 1006  
+Office hours (Tues 4-5pm, Virtual Thurs 4-5pm)  
+
+
 
 ## Introduction
 This course provides an introduction to the analytical tools used in regional
