@@ -3,7 +3,7 @@
 Instructor: Sergio Rey  
 Tuesdays: 5:40-8:30PM  
 CHASS INTS-N Room 1006  
-Office hours: Tues 4-5pm (Rivera 159),  Thurs 4-5pm (Zoom)
+Office hours (Tues 4-5pm, Virtual Thurs 4-5pm)  
 
 
 
@@ -174,4 +174,22 @@ Week 1 April 9
 
 - [GithHub 101](https://www.chronicle.com/blogs/profhacker/tag/github101)
 - [Git and Github](tools/github.md)
+
+
+### Week 2 April 16
+
+#### Readings/Resources
+- [Schaffer, W.A. Economic Base Theory](http://www.rri.wvu.edu/WebBook/Schaffer/Chapter%203%20S11%20for%20WVA.pdf)
+
+
+#### Collaborative Discussion
+
+- Regional Accounts
+- Regional Data
+- Economic Base
+
+#### Tools and Analysis
+
+- Location Quotients
+- Economic Base Multipliers
 
