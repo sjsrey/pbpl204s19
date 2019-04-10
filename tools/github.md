@@ -18,3 +18,7 @@ If you do not already have one, sign up for a [GitHub account](https://help.gith
 
 Follow the instructions at [Getting Started with Github Desktop](https://help.github.com/en/desktop/getting-started-with-github-desktop)
  to install a client for your own computer.
+ 
+ 
+### Using GitHub
+Work throught the [tutorial](https://guides.github.com/activities/hello-world/)
