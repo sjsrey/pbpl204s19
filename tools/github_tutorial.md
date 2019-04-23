@@ -1,28 +1,28 @@
 
 # Table of Contents
 
-1.  [Setup](#orga51d0ac)
-    1.  [Git bash cli](#org4601201)
-        1.  [Windows](#orgab76b65)
-        2.  [Mac](#org966e1c7)
-        3.  [Terminal commands](#orge1ee1f4)
-2.  [Repositories](#orgcf57d46)
-    1.  [Local](#org01074c9)
-    2.  [Remotes](#org9ebe343)
-        1.  [Setting up remote authentication](#orge83baa4)
-        2.  [mac](#org0efcc55)
-        3.  [Push a local to a new remote](#org237e2d8)
-        4.  [Fork](#org2681320)
-        5.  [Cloning](#orgf34e441)
+1.  [Setup](#orgee25440)
+    1.  [Git bash cli](#org156715e)
+        1.  [Windows](#orgabd2b40)
+        2.  [Mac](#org0db66ae)
+        3.  [Terminal commands](#org0158422)
+2.  [Repositories](#org565e888)
+    1.  [Local](#orgad2b38b)
+    2.  [Remotes](#org8a751cf)
+        1.  [Setting up remote authentication](#orgd56ba70)
+        2.  [mac](#org4170396)
+        3.  [Push a local to a new remote](#orgb62e94f)
+        4.  [Fork](#org4220216)
+        5.  [Cloning](#org69a1e33)
 
 
 
-<a id="orga51d0ac"></a>
+<a id="orgee25440"></a>
 
 # Setup
 
 
-<a id="org4601201"></a>
+<a id="org156715e"></a>
 
 ## Git bash cli
 
@@ -39,7 +39,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="orgab76b65"></a>
+<a id="orgabd2b40"></a>
 
 ### Windows
 
@@ -110,14 +110,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org966e1c7"></a>
+<a id="org0db66ae"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="orge1ee1f4"></a>
+<a id="org0158422"></a>
 
 ### Terminal commands
 
@@ -272,14 +272,36 @@ Some common bash commands to become familiar with include:
             
             serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses
             $
+    
+    2.  Tab completion
+    
+        We can also make use of the `Tab` key to save us some typing. We have
+        previously created the directory `pbpl204w19` but haven't yet changed into it
+        as we are currently in its parent folder. We could get into that directory
+        using `cd pbpl204w19` but that is too much typing. Instead use `cd pb<TAB>`
+        where `<TAB>` means use the tab key to complete the typing:
+        
+            serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses
+            $ cd pbpl204w19/
+        
+        Then `Enter`:
+        
+            $ cd pbpl204w19/
+            
+            serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19
+            $ pwd
+            /c/Users/serge/Documents/courses/pbpl204w19
+            
+            serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19
+            $
 
 
-<a id="orgcf57d46"></a>
+<a id="org565e888"></a>
 
 # Repositories
 
 
-<a id="org01074c9"></a>
+<a id="orgad2b38b"></a>
 
 ## Local
 
@@ -300,12 +322,12 @@ Some common bash commands to become familiar with include:
 -   git bash for interfacing with git
 
 
-<a id="org9ebe343"></a>
+<a id="org8a751cf"></a>
 
 ## Remotes
 
 
-<a id="orge83baa4"></a>
+<a id="orgd56ba70"></a>
 
 ### Setting up remote authentication
 
@@ -314,14 +336,14 @@ Some common bash commands to become familiar with include:
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="org0efcc55"></a>
+<a id="org4170396"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="org237e2d8"></a>
+<a id="orgb62e94f"></a>
 
 ### Push a local to a new remote
 
@@ -338,12 +360,12 @@ Some common bash commands to become familiar with include:
 -   git status
 
 
-<a id="org2681320"></a>
+<a id="org4220216"></a>
 
 ### Fork
 
 
-<a id="orgf34e441"></a>
+<a id="org69a1e33"></a>
 
 ### Cloning
 
