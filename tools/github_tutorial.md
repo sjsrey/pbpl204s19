@@ -1,31 +1,32 @@
 
 # Table of Contents
 
-1.  [Setup](#org698d365)
-    1.  [Git bash cli](#orgb6df159)
-        1.  [Windows](#orgce0ecad)
-        2.  [Mac](#org2c0d1c2)
-        3.  [Terminal commands](#org3d923b8)
-2.  [Repositories](#orgc247413)
-    1.  [Initializing a git repository](#orga988116)
-    2.  [Status](#org6eef318)
-    3.  [Adding a file](#orga483bed)
-    4.  [Local](#orgc08638b)
-    5.  [Remotes](#orgbdb3962)
-        1.  [Setting up remote authentication](#orgef40d46)
-        2.  [mac](#org39b027b)
-        3.  [Push a local to a new remote](#org4939600)
-        4.  [Fork](#orga6f9172)
-        5.  [Cloning](#org524c69f)
+1.  [Setup](#orgb495965)
+    1.  [Git bash cli](#org92dde66)
+        1.  [Windows](#org195b4b3)
+        2.  [Mac](#org753a19a)
+        3.  [Terminal commands](#orgeecb265)
+2.  [Repositories](#orgf6a81c7)
+    1.  [Initializing a local git repository](#orgb1dce1a)
+    2.  [Status](#org7be172f)
+    3.  [Adding a file](#org59b762c)
+    4.  [Commiting](#orgd5bcd66)
+    5.  [Local](#orgc2afcec)
+    6.  [Remotes](#org87a5a7c)
+        1.  [Setting up remote authentication](#org48ca4af)
+        2.  [mac](#orga25202a)
+        3.  [Push a local to a new remote](#org701ad36)
+        4.  [Fork](#org54e3860)
+        5.  [Cloning](#org8c16449)
 
 
 
-<a id="org698d365"></a>
+<a id="orgb495965"></a>
 
 # Setup
 
 
-<a id="orgb6df159"></a>
+<a id="org92dde66"></a>
 
 ## Git bash cli
 
@@ -42,7 +43,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="orgce0ecad"></a>
+<a id="org195b4b3"></a>
 
 ### Windows
 
@@ -113,14 +114,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org2c0d1c2"></a>
+<a id="org753a19a"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="org3d923b8"></a>
+<a id="orgeecb265"></a>
 
 ### Terminal commands
 
@@ -299,7 +300,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="orgc247413"></a>
+<a id="orgf6a81c7"></a>
 
 # Repositories
 
@@ -319,9 +320,9 @@ repository for each project, rather than one repository to hold many projects).
     serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial
 
 
-<a id="orga988116"></a>
+<a id="orgb1dce1a"></a>
 
-## Initializing a git repository
+## Initializing a local git repository
 
 So far we have a new directory, but not a respository. We will initialize the
 repository with `git init`
@@ -334,7 +335,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="org6eef318"></a>
+<a id="org7be172f"></a>
 
 ## Status
 
@@ -354,7 +355,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="orga483bed"></a>
+<a id="org59b762c"></a>
 
 ## Adding a file
 
@@ -377,8 +378,107 @@ so that your editor should look something like:
 Now that file is a simple text file that uses [Markdown](<https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>) syntax that is
 rendered on github nicely (and used to build webpages everywhere).
 
+If we check the status of our repository now:
 
-<a id="orgc08638b"></a>
+    $ git status
+    On branch master
+    
+    No commits yet
+    
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+    
+            README.md
+    
+    nothing added to commit but untracked files present (use "git add" to track)
+
+we see that the new file `README.md` shows up under *Untracked files*. This
+means it is not tracked by the repository, but rather is in the folder where
+the other files in our repository reside. 
+
+We can add the file to our repository with `git add`:
+
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $ git add README.md
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+
+Now check the status again:
+
+    $ git status
+    On branch master
+    
+    No commits yet
+    
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+    
+            new file:   README.md
+    
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+
+and we see the file `README.md` has changes that can be committed. This means
+the file is now being tracked by git (since we just added it).
+Technically speaking, the file has been *stagged* and is ready for *commiting*.
+The stagging area holds changes we have made to a file in the respository, but
+those changes have not yet been commited to the repository.
+The stage allows us to make a bunch of changes to a file before we do a commit.
+
+
+<a id="orgd5bcd66"></a>
+
+## Commiting
+
+We now are in a position to commit our changes in the file to the respository.
+We use `git commit` for this:
+
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $ git commit
+
+which should bring up Notepadd++ that we configured above to edit our commit
+message. Below the lines beginning with \`#\` add a commit message so your editor
+looks like:
+
+![img](figures/commitmessage.png)
+
+Save the file (`CTRL-s`) and quit notepad++ and you should see:
+
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $ git commit
+    [master (root-commit) 9440660] My first commit.
+     1 file changed, 3 insertions(+)
+     create mode 100644 README.md
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $
+
+Recheck the status of the repository:
+
+> serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+> $ git status
+> On branch master
+> nothing to commit, working tree clean
+> 
+> serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+> $
+
+So we have nothing to commit, and our working tree is clean. All good.
+
+We can get a look at what git knows about our respository using `git log`:
+
+    $ git log
+    commit 94406606f5b2f20a0abf290a0b916308aa4ac0e2 (HEAD -> master)
+    Author: Serge Rey <sjsrey@gmail.com>
+    Date:   Tue Apr 23 10:14:29 2019 -0700
+    
+        My first commit.
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $
+
+
+<a id="orgc2afcec"></a>
 
 ## Local
 
@@ -399,12 +499,12 @@ rendered on github nicely (and used to build webpages everywhere).
 -   git bash for interfacing with git
 
 
-<a id="orgbdb3962"></a>
+<a id="org87a5a7c"></a>
 
 ## Remotes
 
 
-<a id="orgef40d46"></a>
+<a id="org48ca4af"></a>
 
 ### Setting up remote authentication
 
@@ -413,14 +513,14 @@ rendered on github nicely (and used to build webpages everywhere).
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="org39b027b"></a>
+<a id="orga25202a"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="org4939600"></a>
+<a id="org701ad36"></a>
 
 ### Push a local to a new remote
 
@@ -437,12 +537,12 @@ rendered on github nicely (and used to build webpages everywhere).
 -   git status
 
 
-<a id="orga6f9172"></a>
+<a id="org54e3860"></a>
 
 ### Fork
 
 
-<a id="org524c69f"></a>
+<a id="org8c16449"></a>
 
 ### Cloning
 
