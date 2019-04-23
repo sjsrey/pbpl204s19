@@ -1,32 +1,32 @@
 
 # Table of Contents
 
-1.  [Setup](#orgd996388)
-    1.  [Git bash cli](#org2baeb43)
-        1.  [Windows](#orgb057b6e)
-        2.  [Mac](#org1626deb)
-        3.  [Terminal commands](#orgf9e2a00)
-2.  [Repositories](#orgacf8136)
-    1.  [Initializing a local git repository](#org33f03ee)
-    2.  [Status](#orgb96df27)
-    3.  [Adding a file](#orgd18e140)
-    4.  [Commiting](#org867c7c3)
-    5.  [Edit-add-commit cycle](#orgad644a8)
-    6.  [Remotes](#orgfc9548f)
-        1.  [Setting up remote authentication](#orge562f1a)
-        2.  [mac](#org118a77c)
-        3.  [Push a local to a new remote](#org005d9ac)
-        4.  [Fork](#org4f3ea0a)
-        5.  [Cloning](#orgd6cb3e4)
+1.  [Setup](#org5b2d087)
+    1.  [Git bash cli](#org75f5624)
+        1.  [Windows](#orgf7bf6e6)
+        2.  [Mac](#org0589d4d)
+        3.  [Terminal commands](#org2d8ec4c)
+2.  [Repositories](#orgf284faa)
+    1.  [Local Repositories](#org6576f3d)
+        1.  [Status](#org934a23a)
+        2.  [Adding a file](#orgccce73a)
+        3.  [Commiting](#orgbd266ba)
+        4.  [Edit-add-commit cycle](#org76e7904)
+    2.  [Remotes](#orgcd5f2bd)
+        1.  [Setting up remote authentication](#org990d40e)
+        2.  [mac](#org9d87517)
+        3.  [Push a local to a new remote](#org0f46df8)
+        4.  [Fork](#org8a2757e)
+        5.  [Cloning](#org8b8d8d3)
 
 
 
-<a id="orgd996388"></a>
+<a id="org5b2d087"></a>
 
 # Setup
 
 
-<a id="org2baeb43"></a>
+<a id="org75f5624"></a>
 
 ## Git bash cli
 
@@ -43,7 +43,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="orgb057b6e"></a>
+<a id="orgf7bf6e6"></a>
 
 ### Windows
 
@@ -114,14 +114,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org1626deb"></a>
+<a id="org0589d4d"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="orgf9e2a00"></a>
+<a id="org2d8ec4c"></a>
 
 ### Terminal commands
 
@@ -300,9 +300,21 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="orgacf8136"></a>
+<a id="orgf284faa"></a>
 
 # Repositories
+
+Repositories are
+where the files for our project will reside, and where git keeps track of the
+history of all files in the project. There are two types of repositories, local
+and remote. Local repositories reside on your laptop or desktop machine, while
+remote repositories generally reside in the "cloud". We start with creating a
+local repository where you will do most of your work. 
+
+
+<a id="org6576f3d"></a>
+
+## Local Repositories
 
 Next we will set up a git repository in our new directory. Repositories are
 where the files for our project will reside, and where git keeps track of the
@@ -319,11 +331,6 @@ repository for each project, rather than one repository to hold many projects).
     
     serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial
 
-
-<a id="org33f03ee"></a>
-
-## Initializing a local git repository
-
 So far we have a new directory, but not a respository. We will initialize the
 repository with `git init`
 
@@ -335,9 +342,9 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="orgb96df27"></a>
+<a id="org934a23a"></a>
 
-## Status
+### Status
 
 Anytime we want to see what the status of our repository is we use `git status`:
 
@@ -355,9 +362,9 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="orgd18e140"></a>
+<a id="orgccce73a"></a>
 
-## Adding a file
+### Adding a file
 
 First we need to create a file, then add it to the repository.
 
@@ -426,9 +433,9 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="org867c7c3"></a>
+<a id="orgbd266ba"></a>
 
-## Commiting
+### Commiting
 
 We now are in a position to commit our changes in the file to the respository.
 We use `git commit` for this:
@@ -482,9 +489,9 @@ good practice to write meaningful commit messages as they can help you remember
 the purpose of the changes you made at that point in the project.
 
 
-<a id="orgad644a8"></a>
+<a id="org76e7904"></a>
 
-## Edit-add-commit cycle
+### Edit-add-commit cycle
 
 Now that we have the file `README.md` under version control we can continue on
 working on the project and getting use to the general workflow.
@@ -564,12 +571,15 @@ And, we can always check the log to see our history:
         My first commit.
 
 
-<a id="orgfc9548f"></a>
+<a id="orgcd5f2bd"></a>
 
 ## Remotes
 
+Remote respositories enable the distributed and social aspects of development
+with git. 
 
-<a id="orge562f1a"></a>
+
+<a id="org990d40e"></a>
 
 ### Setting up remote authentication
 
@@ -578,14 +588,14 @@ And, we can always check the log to see our history:
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="org118a77c"></a>
+<a id="org9d87517"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="org005d9ac"></a>
+<a id="org0f46df8"></a>
 
 ### Push a local to a new remote
 
@@ -602,12 +612,12 @@ And, we can always check the log to see our history:
 -   git status
 
 
-<a id="org4f3ea0a"></a>
+<a id="org8a2757e"></a>
 
 ### Fork
 
 
-<a id="orgd6cb3e4"></a>
+<a id="org8b8d8d3"></a>
 
 ### Cloning
 
