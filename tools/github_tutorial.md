@@ -1,28 +1,28 @@
 
 # Table of Contents
 
-1.  [Setup](#org5826409)
-    1.  [Git bash cli](#org04995e4)
-        1.  [Windows](#org1ba40f8)
-        2.  [Mac](#org283b69b)
-        3.  [Terminal commands](#orge6c82bf)
-2.  [Repositories](#org0746363)
-    1.  [Local](#org5fa3136)
-    2.  [Remotes](#orga2b4aab)
-        1.  [Setting up remote authentication](#org58e3865)
-        2.  [mac](#orgadecdf4)
-        3.  [Push a local to a new remote](#org8896db8)
-        4.  [Fork](#org1b3636f)
-        5.  [Cloning](#orgb06b157)
+1.  [Setup](#orga51d0ac)
+    1.  [Git bash cli](#org4601201)
+        1.  [Windows](#orgab76b65)
+        2.  [Mac](#org966e1c7)
+        3.  [Terminal commands](#orge1ee1f4)
+2.  [Repositories](#orgcf57d46)
+    1.  [Local](#org01074c9)
+    2.  [Remotes](#org9ebe343)
+        1.  [Setting up remote authentication](#orge83baa4)
+        2.  [mac](#org0efcc55)
+        3.  [Push a local to a new remote](#org237e2d8)
+        4.  [Fork](#org2681320)
+        5.  [Cloning](#orgf34e441)
 
 
 
-<a id="org5826409"></a>
+<a id="orga51d0ac"></a>
 
 # Setup
 
 
-<a id="org04995e4"></a>
+<a id="org4601201"></a>
 
 ## Git bash cli
 
@@ -39,7 +39,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="org1ba40f8"></a>
+<a id="orgab76b65"></a>
 
 ### Windows
 
@@ -110,14 +110,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org283b69b"></a>
+<a id="org966e1c7"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="orge6c82bf"></a>
+<a id="orge1ee1f4"></a>
 
 ### Terminal commands
 
@@ -174,13 +174,112 @@ Some common bash commands to become familiar with include:
 
 4.  making a directory: `mkdir`
 
+    We will create a directory for our course work.
+    
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents
+        $ mkdir courses
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents
+        $ ls
+         ArcGIS/                                       courses/       'My Videos'@
+        'ArcGIS 10.5.1'/                               desktop.ini     p/
+        'ArcGIS Pro 2.2'/                             'My Music'@
+         ArcGISDesktopAdvanced_SingleUse_690779.prvc  'My Pictures'@
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents
+        $ cd courses
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses
+        $ pwd
+        /c/Users/serge/Documents/courses
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses
+        $ mkdir pbpl204w19
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses
+        $ ls
+        pbpl204w19/
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses
+        $
 
-<a id="org0746363"></a>
+5.  Shell tips
+
+    There are a number of handy features in the shell that can save us time.
+    
+    1.  History
+    
+        Using the up arrow key, we can recall the history of things we have done to
+        recall a command we want to repeat (or edit). Each time we up-arrow we go back
+        in the history one step. If you are on the command you want, you can hit
+        `Enter` to execute that command. If you overshoot with the up arrow key, use
+        the down arrow key to go in the other direction.
+        
+        You can also use the `history` command to get a listing of what you have done:
+        
+             242  cd git_tutorial/
+              243  ls
+              244  git status
+              245  git remote -v
+              246  git pull origin master
+              247  ssh -v snuc
+              248  emacs -nw
+              249  exit
+              250  pwd
+              251  ls
+              252  clear
+              253  ls
+              254  cd Documents/
+              255  pwd
+              256  ls
+              257  cd courses/
+              258  ls
+              259  rmdir -f pbpl204s19/
+              260  rm -f pbpl204s19/
+              261  rm -fr pbpl204s19/
+              262  ls
+              263  clear
+              264  cd ..
+              265  clear
+              266  rm -rf courses
+              267  clear
+              268  ls
+              269  mkdir courses/pbpl204s19
+              270  clear
+              271  mkdir courses
+              272  ls
+              273  cd courses
+              274  pwd
+              275  mkdir pbpl204w19
+              276  ls
+              277  history
+            
+            serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses
+            $
+        
+        So `history` was the last thing I did. If I want to use `pwd`, for example, I
+        can use `!274` and `Enter` to repeat the command:
+        
+              274  pwd
+              275  mkdir pbpl204w19
+              276  ls
+              277  history
+            
+            serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses
+            $ !274
+            pwd
+            /c/Users/serge/Documents/courses
+            
+            serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses
+            $
+
+
+<a id="orgcf57d46"></a>
 
 # Repositories
 
 
-<a id="org5fa3136"></a>
+<a id="org01074c9"></a>
 
 ## Local
 
@@ -201,12 +300,12 @@ Some common bash commands to become familiar with include:
 -   git bash for interfacing with git
 
 
-<a id="orga2b4aab"></a>
+<a id="org9ebe343"></a>
 
 ## Remotes
 
 
-<a id="org58e3865"></a>
+<a id="orge83baa4"></a>
 
 ### Setting up remote authentication
 
@@ -215,14 +314,14 @@ Some common bash commands to become familiar with include:
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="orgadecdf4"></a>
+<a id="org0efcc55"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="org8896db8"></a>
+<a id="org237e2d8"></a>
 
 ### Push a local to a new remote
 
@@ -239,12 +338,12 @@ Some common bash commands to become familiar with include:
 -   git status
 
 
-<a id="org1b3636f"></a>
+<a id="org2681320"></a>
 
 ### Fork
 
 
-<a id="orgb06b157"></a>
+<a id="orgf34e441"></a>
 
 ### Cloning
 
