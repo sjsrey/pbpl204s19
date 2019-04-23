@@ -200,7 +200,7 @@ Week 3 April 23
 
 ### Readings/Resources
 
-- [Chacon, S. and B. Straub (2014) Pro Git](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line). Chapters 1 and 2.
+- [Chacon, S. and B. Straub (2014) Pro Git](https://git-scm.com/book/en/v2). Chapters 1 and 2.
 - If you are using Windows, also read the [Git-bash Tutorial](https://www.atlassian.com/git/tutorials/git-bash)
 - If you are on a Mac, also read [Setting Up Github on your Mac](http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/)
 
