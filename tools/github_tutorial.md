@@ -1,32 +1,32 @@
 
 # Table of Contents
 
-1.  [Setup](#org760e622)
-    1.  [Git bash cli](#orgd5835d1)
-        1.  [Windows](#org7ff368a)
-        2.  [Mac](#org13afe48)
-        3.  [Terminal commands](#orgddaf9f7)
-2.  [Repositories](#orgd5d4694)
-    1.  [Local](#org76ea439)
-    2.  [Remotes](#org2fbecad)
-        1.  [Setting up remote authentication](#orgd504536)
-        2.  [mac](#org2aa9b0e)
-        3.  [Push a local to a new remote](#org5848845)
-        4.  [Fork](#org2af7dd4)
-        5.  [Cloning](#org6a843fc)
+1.  [Setup](#org5826409)
+    1.  [Git bash cli](#org04995e4)
+        1.  [Windows](#org1ba40f8)
+        2.  [Mac](#org283b69b)
+        3.  [Terminal commands](#orge6c82bf)
+2.  [Repositories](#org0746363)
+    1.  [Local](#org5fa3136)
+    2.  [Remotes](#orga2b4aab)
+        1.  [Setting up remote authentication](#org58e3865)
+        2.  [mac](#orgadecdf4)
+        3.  [Push a local to a new remote](#org8896db8)
+        4.  [Fork](#org1b3636f)
+        5.  [Cloning](#orgb06b157)
 
 
 
-<a id="org760e622"></a>
+<a id="org5826409"></a>
 
 # Setup
 
 
-<a id="orgd5835d1"></a>
+<a id="org04995e4"></a>
 
 ## Git bash cli
 
-We will rely on the command line client (CLI) to work with git. While this may
+We will rely on the command line interface (CLI) to work with git. While this may
 seem arcane at first, relative to a more famililar point-and-click interface,
 using the command line will have major payoffs for the initial investment. The
 key benefits of the cli over a graphical client are:
@@ -35,10 +35,11 @@ key benefits of the cli over a graphical client are:
 -   flexibility
 -   portability
 
-We are going to use git-bash as our client on Windows and Mac. 
+We are going to use git-bash as our CLI client on Windows. We then will setup a cli
+for Mac after configuring Windows. 
 
 
-<a id="org7ff368a"></a>
+<a id="org1ba40f8"></a>
 
 ### Windows
 
@@ -109,28 +110,77 @@ We are going to use git-bash as our client on Windows and Mac.
             sjsrey@gmail.com
 
 
-<a id="org13afe48"></a>
+<a id="org283b69b"></a>
 
 ### Mac
 
+1.  Configuration
 
-<a id="orgddaf9f7"></a>
+
+<a id="orge6c82bf"></a>
 
 ### Terminal commands
 
-1.  cd
+Once we have the command line client setup, we are at a bash prompt on either
+Windows or Mac, and the commands will all be the same (with the exception of
+the editor if we are using one to create the git commit messages-more below).
 
-2.  ls
+Some common bash commands to become familiar with include:
 
-3.  mkdir
+1.  finding out current directory: `pwd`
+
+        serge@DESKTOP-FA80SDI MINGW64 ~
+        $ pwd
+        /c/Users/serge/
+        
+        serge@DESKTOP-FA80SDI MINGW64 ~
+
+2.  listing contents of current director: `ls`
+
+        serge@DESKTOP-FA80SDI MINGW64 ~
+        $ ls
+        '3D Objects'/
+         Anaconda3/
+         AppData/
+        'Application Data'@
+         Contacts/
+         Cookies@
+         Desktop/
+         Documents/
+         Downloads/
+         Dropbox/
+         Favorites/
+         Links/
+        'Local Settings'@
+         MicrosoftEdgeBackups/
+         Music/
+        'My Documents'@
+         NetHood@
+
+3.  moving to a directory: `cd`
+
+        serge@DESKTOP-FA80SDI MINGW64 ~
+        $ cd Documents/
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents
+        $ pwd
+        /c/Users/serge/Documents
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents
+    
+    Note that `cd` without an argument will take you back to your home directory.
+    
+    Also note that `clear` will clear the terminal.
+
+4.  making a directory: `mkdir`
 
 
-<a id="orgd5d4694"></a>
+<a id="org0746363"></a>
 
 # Repositories
 
 
-<a id="org76ea439"></a>
+<a id="org5fa3136"></a>
 
 ## Local
 
@@ -151,12 +201,12 @@ We are going to use git-bash as our client on Windows and Mac.
 -   git bash for interfacing with git
 
 
-<a id="org2fbecad"></a>
+<a id="orga2b4aab"></a>
 
 ## Remotes
 
 
-<a id="orgd504536"></a>
+<a id="org58e3865"></a>
 
 ### Setting up remote authentication
 
@@ -165,14 +215,14 @@ We are going to use git-bash as our client on Windows and Mac.
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="org2aa9b0e"></a>
+<a id="orgadecdf4"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="org5848845"></a>
+<a id="org8896db8"></a>
 
 ### Push a local to a new remote
 
@@ -189,12 +239,12 @@ We are going to use git-bash as our client on Windows and Mac.
 -   git status
 
 
-<a id="org2af7dd4"></a>
+<a id="org1b3636f"></a>
 
 ### Fork
 
 
-<a id="org6a843fc"></a>
+<a id="orgb06b157"></a>
 
 ### Cloning
 
