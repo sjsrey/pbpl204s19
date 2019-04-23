@@ -1,32 +1,32 @@
 
 # Table of Contents
 
-1.  [Setup](#org4d37f10)
-    1.  [Git bash cli](#orgb410853)
-        1.  [Windows](#org1ada8d2)
-        2.  [Mac](#org2a875c4)
-        3.  [Terminal commands](#orgd613446)
-2.  [Repositories](#org48bb7b6)
-    1.  [Initializing a local git repository](#orgaefd3a9)
-    2.  [Status](#orgc838cc5)
-    3.  [Adding a file](#org481a681)
-    4.  [Commiting](#org23f697e)
-    5.  [Local](#org097c928)
-    6.  [Remotes](#org396a913)
-        1.  [Setting up remote authentication](#orga39f28d)
-        2.  [mac](#org4410f6e)
-        3.  [Push a local to a new remote](#org8845c65)
-        4.  [Fork](#org00d0eee)
-        5.  [Cloning](#orged44ac0)
+1.  [Setup](#orgd996388)
+    1.  [Git bash cli](#org2baeb43)
+        1.  [Windows](#orgb057b6e)
+        2.  [Mac](#org1626deb)
+        3.  [Terminal commands](#orgf9e2a00)
+2.  [Repositories](#orgacf8136)
+    1.  [Initializing a local git repository](#org33f03ee)
+    2.  [Status](#orgb96df27)
+    3.  [Adding a file](#orgd18e140)
+    4.  [Commiting](#org867c7c3)
+    5.  [Edit-add-commit cycle](#orgad644a8)
+    6.  [Remotes](#orgfc9548f)
+        1.  [Setting up remote authentication](#orge562f1a)
+        2.  [mac](#org118a77c)
+        3.  [Push a local to a new remote](#org005d9ac)
+        4.  [Fork](#org4f3ea0a)
+        5.  [Cloning](#orgd6cb3e4)
 
 
 
-<a id="org4d37f10"></a>
+<a id="orgd996388"></a>
 
 # Setup
 
 
-<a id="orgb410853"></a>
+<a id="org2baeb43"></a>
 
 ## Git bash cli
 
@@ -43,7 +43,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="org1ada8d2"></a>
+<a id="orgb057b6e"></a>
 
 ### Windows
 
@@ -114,14 +114,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org2a875c4"></a>
+<a id="org1626deb"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="orgd613446"></a>
+<a id="orgf9e2a00"></a>
 
 ### Terminal commands
 
@@ -300,7 +300,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="org48bb7b6"></a>
+<a id="orgacf8136"></a>
 
 # Repositories
 
@@ -320,7 +320,7 @@ repository for each project, rather than one repository to hold many projects).
     serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial
 
 
-<a id="orgaefd3a9"></a>
+<a id="org33f03ee"></a>
 
 ## Initializing a local git repository
 
@@ -335,7 +335,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="orgc838cc5"></a>
+<a id="orgb96df27"></a>
 
 ## Status
 
@@ -355,7 +355,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="org481a681"></a>
+<a id="orgd18e140"></a>
 
 ## Adding a file
 
@@ -426,7 +426,7 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="org23f697e"></a>
+<a id="org867c7c3"></a>
 
 ## Commiting
 
@@ -482,33 +482,94 @@ good practice to write meaningful commit messages as they can help you remember
 the purpose of the changes you made at that point in the project.
 
 
-<a id="org097c928"></a>
+<a id="orgad644a8"></a>
 
-## Local
+## Edit-add-commit cycle
 
--   create a local repository
--   git init
--   edit a file README.md
--   git status
--   demonstrate git add
--   demonstrate git commit
--   using the editor
--   git status
--   
+Now that we have the file `README.md` under version control we can continue on
+working on the project and getting use to the general workflow.
 
--   fire up spyder
--   create a file saving to the same directory as the repository
--   git status
--   edit in spyder to develop
--   git bash for interfacing with git
+Continue to edit the file in `spyder`, adding the two additional lines:
+
+![img](figures/spyderedits.png)
+and save. Then check the status of our repository:
+
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git checkout -- <file>..." to discard changes in working directory)
+    
+            modified:   README.md
+    
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+
+Our file has been modified by the edits we just made. These changes have not
+yet been stagged or committed to the repository. This is ok as we might want to
+continue making changes, we don't have to immediately stage all changes - we
+can accumulate a bunch related to one task/section and then add.
+
+For now let's stage these with `git add`:
+
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $ git add README.md
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+
+and check the status
+
+    $ git status
+    On branch master
+    Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
+    
+            modified:   README.md
+    
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $
+
+so now the file is stagged, but not committed. 
+
+We can now commit the changes, but we will do so in a way that shorcuts adding
+the commit message without having to use Notepad++. We do this with:
+
+    $ git commit -m 'More edits to README.md'
+    [master 27388d9] More edits to README.md
+     1 file changed, 3 insertions(+)
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $
+
+The `-m` flag tells git what follows between the single pair of `` ` `` characters
+is our commit message. So no need for firing up an editor to get the commit
+message added.
+
+And, we can always check the log to see our history:
+
+    $ git log
+    commit 27388d99e35ab4188794ec18cc3ea59f5c0d3fd7 (HEAD -> master)
+    Author: Serge Rey <sjsrey@gmail.com>
+    Date:   Tue Apr 23 10:58:21 2019 -0700
+    
+        More edits to README.md
+    
+    commit 94406606f5b2f20a0abf290a0b916308aa4ac0e2
+    Author: Serge Rey <sjsrey@gmail.com>
+    Date:   Tue Apr 23 10:14:29 2019 -0700
+    
+        My first commit.
 
 
-<a id="org396a913"></a>
+<a id="orgfc9548f"></a>
 
 ## Remotes
 
 
-<a id="orga39f28d"></a>
+<a id="orge562f1a"></a>
 
 ### Setting up remote authentication
 
@@ -517,14 +578,14 @@ the purpose of the changes you made at that point in the project.
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="org4410f6e"></a>
+<a id="org118a77c"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="org8845c65"></a>
+<a id="org005d9ac"></a>
 
 ### Push a local to a new remote
 
@@ -541,12 +602,12 @@ the purpose of the changes you made at that point in the project.
 -   git status
 
 
-<a id="org00d0eee"></a>
+<a id="org4f3ea0a"></a>
 
 ### Fork
 
 
-<a id="orged44ac0"></a>
+<a id="orgd6cb3e4"></a>
 
 ### Cloning
 
