@@ -1,32 +1,32 @@
 
 # Table of Contents
 
-1.  [Setup](#org7cb3e1c)
-    1.  [Git bash cli](#org4a5c5cf)
-        1.  [Windows](#org8164a9a)
-        2.  [Mac](#orgd1ec5ab)
-        3.  [Terminal commands](#orga800857)
-2.  [Repositories](#org0076f7d)
-    1.  [Local Repositories](#orgb2275f8)
-        1.  [Status](#orgb9710a7)
-        2.  [Adding a file](#orga93b6e9)
-        3.  [Commiting](#org5b0f8a6)
-        4.  [Edit-add-commit cycle](#orgff4dfb4)
-    2.  [Remotes](#orgc38faa7)
-        1.  [Setting up remote authentication](#orgd02c1b5)
-        2.  [mac](#org07ce86f)
-        3.  [Push a local to a new remote](#orgebcf38a)
-        4.  [Fork](#org45b4f76)
-        5.  [Cloning](#org4e57323)
+1.  [Setup](#org0625353)
+    1.  [Git bash cli](#org7a18b22)
+        1.  [Windows](#orged19265)
+        2.  [Mac](#org297c70b)
+        3.  [Terminal commands](#orgb8955e2)
+2.  [Repositories](#org5916104)
+    1.  [Local Repositories](#org1a28ba6)
+        1.  [Status](#orgc9f7a1f)
+        2.  [Adding a file](#orgd29ac62)
+        3.  [Commiting](#orgbbb2f5b)
+        4.  [Edit-add-commit cycle](#org56369c0)
+    2.  [Remotes](#orgcffc850)
+        1.  [Setting up remote authentication](#org95edcba)
+        2.  [mac](#org51bd657)
+        3.  [Push a local to a new remote](#org955bec1)
+        4.  [Fork](#org57bfc05)
+        5.  [Cloning](#org1ac4de2)
 
 
 
-<a id="org7cb3e1c"></a>
+<a id="org0625353"></a>
 
 # Setup
 
 
-<a id="org4a5c5cf"></a>
+<a id="org7a18b22"></a>
 
 ## Git bash cli
 
@@ -43,7 +43,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="org8164a9a"></a>
+<a id="orged19265"></a>
 
 ### Windows
 
@@ -114,14 +114,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="orgd1ec5ab"></a>
+<a id="org297c70b"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="orga800857"></a>
+<a id="orgb8955e2"></a>
 
 ### Terminal commands
 
@@ -300,7 +300,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="org0076f7d"></a>
+<a id="org5916104"></a>
 
 # Repositories
 
@@ -312,7 +312,7 @@ remote repositories generally reside in the "cloud". We start with creating a
 local repository where you will do most of your work. 
 
 
-<a id="orgb2275f8"></a>
+<a id="org1a28ba6"></a>
 
 ## Local Repositories
 
@@ -342,7 +342,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="orgb9710a7"></a>
+<a id="orgc9f7a1f"></a>
 
 ### Status
 
@@ -362,7 +362,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="orga93b6e9"></a>
+<a id="orgd29ac62"></a>
 
 ### Adding a file
 
@@ -433,7 +433,7 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="org5b0f8a6"></a>
+<a id="orgbbb2f5b"></a>
 
 ### Commiting
 
@@ -489,7 +489,7 @@ good practice to write meaningful commit messages as they can help you remember
 the purpose of the changes you made at that point in the project.
 
 
-<a id="orgff4dfb4"></a>
+<a id="org56369c0"></a>
 
 ### Edit-add-commit cycle
 
@@ -571,7 +571,7 @@ And, we can always check the log to see our history:
         My first commit.
 
 
-<a id="orgc38faa7"></a>
+<a id="orgcffc850"></a>
 
 ## Remotes
 
@@ -588,7 +588,7 @@ In order to tap into these benefits we have to first understand how to setup
 authentication with our github account.
 
 
-<a id="orgd02c1b5"></a>
+<a id="org95edcba"></a>
 
 ### Setting up remote authentication
 
@@ -601,6 +601,8 @@ Our first step is to create our ssh keys.
 
     We can follow the git book instructions for doing this:
     [ssh keys](https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key#_generate_ssh_key)
+    
+    Make sure you remember your passphrase as we will be using it later on.
 
 2.  Getting our key up to github
 
@@ -717,17 +719,111 @@ Our first step is to create our ssh keys.
     To have this take effect, you will need to close your git bash window and
     restart a new one.
     
+    Now, if we restart a shell we should be prompted for our passphrase:
+    
+    ![img](figures/sshask.png)
+    
+    Entering our passphrase correctly will add our identity to the session and we
+    will no longer be asked for our passphrase when connecting to a remote (until
+    we reboot the machine):
+    
+    ![img](figures/sshidentity.png)
+    
     Further Reading: [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
+4.  Creating a Remote Repository
 
-<a id="org07ce86f"></a>
+    We are set to connect to a remote, so let's create our own on github for the
+    purposes of this tutorial. On your github account click the dropdown next to
+    your profile and select `New Repository`:
+    
+    ![img](figures/newrepo.png)
+    
+    This will bring up a new dialog. We will name the repository `gittest` and make
+    it `private` so only you can see it. We could make it public but since this is
+    early days we might not want to share our files:
+    
+    ![img](figures/gittest.png)
+    
+    Once you are happy, select `Create repository` and this will bring up
+    instructions on options for interacting with this new repository:
+    
+    ![img](figures/gitremote.png)
+    
+    We have already created our *local respository* so we want to follow the second
+    set of instructions to get our work up to the remote.
+    
+    First, we add a remote to our local repository so git knows about it (make
+    sure you are in the repository directory):
+    
+        $ ls
+        README.md
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+        $ git status
+        On branch master
+        nothing to commit, working tree clean
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+        $ git remote add origin git@github.com:sjsrey/gittest.git
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+        $ git remote -v
+        origin  git@github.com:sjsrey/gittest.git (fetch)
+        origin  git@github.com:sjsrey/gittest.git (push)
+    
+    Next, we push our changes up to this remote:
+    
+        $ git push -u origin master
+        Enumerating objects: 6, done.
+        Counting objects: 100% (6/6), done.
+        Delta compression using up to 8 threads
+        Compressing objects: 100% (4/4), done.
+        Writing objects: 100% (6/6), 545 bytes | 109.00 KiB/s, done.
+        Total 6 (delta 1), reused 0 (delta 0)
+        remote: Resolving deltas: 100% (1/1), done.
+        To github.com:sjsrey/gittest.git
+         * [new branch]      master -> master
+        Branch 'master' set up to track remote branch 'master' from 'origin'.
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    
+    Congratulations, you have just pushed to your first remote!
+    
+    To see the results of your work, go back to github and click the `gittest`
+    repos name at the top of the file:
+    
+    ![img](figures/gittestselect.png)
+    
+    This gets you to the home page on github for your repository:
+    
+    ![img](figures/gittesthome.png)
+    
+    Select the `Commits` link:
+    
+    ![img](figures/gitcommits.png)
+    
+    and you will see the commits that we made locally. This all gets pushed up to
+    the remote so your entire history will be saved both locally and remotely.
+    
+    We can explore individual commits by clicking on the "hash":
+    
+    ![img](figures/gitcommitslog.png)
+    
+    This shows us a side-by-side comparison of the file involved in this commit,
+    left is before the commit, right is after the commit. Green indicates stuff was added.
+    
+    ![img](figures/commitdiff.png)
+
+
+<a id="org51bd657"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="orgebcf38a"></a>
+<a id="org955bec1"></a>
 
 ### Push a local to a new remote
 
@@ -744,12 +840,12 @@ Our first step is to create our ssh keys.
 -   git status
 
 
-<a id="org45b4f76"></a>
+<a id="org57bfc05"></a>
 
 ### Fork
 
 
-<a id="org4e57323"></a>
+<a id="org1ac4de2"></a>
 
 ### Cloning
 
