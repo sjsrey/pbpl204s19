@@ -1,28 +1,31 @@
 
 # Table of Contents
 
-1.  [Setup](#orgee25440)
-    1.  [Git bash cli](#org156715e)
-        1.  [Windows](#orgabd2b40)
-        2.  [Mac](#org0db66ae)
-        3.  [Terminal commands](#org0158422)
-2.  [Repositories](#org565e888)
-    1.  [Local](#orgad2b38b)
-    2.  [Remotes](#org8a751cf)
-        1.  [Setting up remote authentication](#orgd56ba70)
-        2.  [mac](#org4170396)
-        3.  [Push a local to a new remote](#orgb62e94f)
-        4.  [Fork](#org4220216)
-        5.  [Cloning](#org69a1e33)
+1.  [Setup](#org698d365)
+    1.  [Git bash cli](#orgb6df159)
+        1.  [Windows](#orgce0ecad)
+        2.  [Mac](#org2c0d1c2)
+        3.  [Terminal commands](#org3d923b8)
+2.  [Repositories](#orgc247413)
+    1.  [Initializing a git repository](#orga988116)
+    2.  [Status](#org6eef318)
+    3.  [Adding a file](#orga483bed)
+    4.  [Local](#orgc08638b)
+    5.  [Remotes](#orgbdb3962)
+        1.  [Setting up remote authentication](#orgef40d46)
+        2.  [mac](#org39b027b)
+        3.  [Push a local to a new remote](#org4939600)
+        4.  [Fork](#orga6f9172)
+        5.  [Cloning](#org524c69f)
 
 
 
-<a id="orgee25440"></a>
+<a id="org698d365"></a>
 
 # Setup
 
 
-<a id="org156715e"></a>
+<a id="orgb6df159"></a>
 
 ## Git bash cli
 
@@ -39,7 +42,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="orgabd2b40"></a>
+<a id="orgce0ecad"></a>
 
 ### Windows
 
@@ -110,14 +113,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org0db66ae"></a>
+<a id="org2c0d1c2"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="org0158422"></a>
+<a id="org3d923b8"></a>
 
 ### Terminal commands
 
@@ -296,12 +299,86 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="org565e888"></a>
+<a id="orgc247413"></a>
 
 # Repositories
 
+Next we will set up a git repository in our new directory. Repositories are
+where the files for our project will reside, and where git keeps track of the
+history of all files in the project.
 
-<a id="orgad2b38b"></a>
+Let us create a new directory for our project (good practice is to have one git
+repository for each project, rather than one repository to hold many projects).
+
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19
+    $ mkdir gittutorial
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19
+    $ cd gittutorial/
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial
+
+
+<a id="orga988116"></a>
+
+## Initializing a git repository
+
+So far we have a new directory, but not a respository. We will initialize the
+repository with `git init`
+
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial
+    $ git init
+    Initialized empty Git repository in C:/Users/serge/Documents/courses/pbpl204w19/gittutorial/.git/
+
+The directory `.git` is where all the bookkeeping is done by git. We need not
+go in there, but it is good to know what it is.
+
+
+<a id="org6eef318"></a>
+
+## Status
+
+Anytime we want to see what the status of our repository is we use `git status`:
+
+    $ git status
+    On branch master
+    
+    No commits yet
+    
+    nothing to commit (create/copy files and use "git add" to track)
+
+This tells us we are on the `branch` called `master`. More on branches later,
+but for now, you can think of a branch as a version of the project repository.
+
+The other output from the `status` command is that we have nothing to commit so
+we may want to add files to our project.
+
+
+<a id="orga483bed"></a>
+
+## Adding a file
+
+First we need to create a file, then add it to the repository.
+
+Open up `spyder` and create a file *in this directory* called `README.md`.
+
+![img](figures/spydereditreadme.png)
+
+Then edit the file to have the first line be:
+
+    # Git and github tutorial
+    
+    Notes on using git and github for PBPL204
+
+so that your editor should look something like:
+
+![img](figures/spyderreadme.png)
+
+Now that file is a simple text file that uses [Markdown](<https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>) syntax that is
+rendered on github nicely (and used to build webpages everywhere).
+
+
+<a id="orgc08638b"></a>
 
 ## Local
 
@@ -322,12 +399,12 @@ Some common bash commands to become familiar with include:
 -   git bash for interfacing with git
 
 
-<a id="org8a751cf"></a>
+<a id="orgbdb3962"></a>
 
 ## Remotes
 
 
-<a id="orgd56ba70"></a>
+<a id="orgef40d46"></a>
 
 ### Setting up remote authentication
 
@@ -336,14 +413,14 @@ Some common bash commands to become familiar with include:
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="org4170396"></a>
+<a id="org39b027b"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="orgb62e94f"></a>
+<a id="org4939600"></a>
 
 ### Push a local to a new remote
 
@@ -360,12 +437,12 @@ Some common bash commands to become familiar with include:
 -   git status
 
 
-<a id="org4220216"></a>
+<a id="orga6f9172"></a>
 
 ### Fork
 
 
-<a id="org69a1e33"></a>
+<a id="org524c69f"></a>
 
 ### Cloning
 
