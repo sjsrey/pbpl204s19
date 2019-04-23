@@ -1,32 +1,32 @@
 
 # Table of Contents
 
-1.  [Setup](#org52fbde6)
-    1.  [Git bash cli](#orgec598ad)
-        1.  [Windows](#org72a16e1)
-        2.  [Mac](#org698cb9e)
-        3.  [Terminal commands](#org2797ed5)
-2.  [Repositories](#org7472fb5)
-    1.  [Local Repositories](#org90ccaa5)
-        1.  [Status](#org31349e2)
-        2.  [Adding a file](#org194d679)
-        3.  [Commiting](#orgc3d3c8b)
-        4.  [Edit-add-commit cycle](#orgf37eaaa)
-    2.  [Remotes](#orgd2449e4)
-        1.  [Setting up remote authentication](#orgc87f81c)
-        2.  [mac](#org073822e)
-        3.  [Push a local to a new remote](#orgf19b1f7)
-        4.  [Fork](#org158287e)
-        5.  [Cloning](#org1f8d990)
+1.  [Setup](#orgd74c520)
+    1.  [Git bash cli](#orgabdc0bd)
+        1.  [Windows](#orgeb40090)
+        2.  [Mac](#org1670138)
+        3.  [Terminal commands](#org5e46bb0)
+2.  [Repositories](#org8436fc2)
+    1.  [Local Repositories](#org04c6663)
+        1.  [Status](#org3d4d3d5)
+        2.  [Adding a file](#orgc0fe593)
+        3.  [Commiting](#orgae26293)
+        4.  [Edit-add-commit cycle](#orgde8b006)
+    2.  [Remotes](#orgb7bd574)
+        1.  [Setting up remote authentication](#org8eaf103)
+        2.  [mac](#orgd41f55a)
+        3.  [Push a local to a new remote](#org6cc7c5d)
+        4.  [Fork](#orgdd2d2a8)
+        5.  [Cloning](#orgf3ea629)
 
 
 
-<a id="org52fbde6"></a>
+<a id="orgd74c520"></a>
 
 # Setup
 
 
-<a id="orgec598ad"></a>
+<a id="orgabdc0bd"></a>
 
 ## Git bash cli
 
@@ -43,7 +43,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="org72a16e1"></a>
+<a id="orgeb40090"></a>
 
 ### Windows
 
@@ -114,14 +114,77 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org698cb9e"></a>
+<a id="org1670138"></a>
 
 ### Mac
 
 1.  Configuration
+    1.  Start Mac CLI:
+        [Terminal app](https://support.apple.com/guide/terminal/welcome/mac)
+        
+        ![img](figures/gitbashstart_mac.png "img")
+        
+        This should open up the console with a git bash shell:
+        
+        ![img](figures/gitbashterminal_mac.png "img")
+    
+    2.  git user config file is:
+        
+        `/Users/$USER/.gitconfig`
+        
+        where `$USER` is the user name (i.e., weikang)
+    
+    3.  In git bash:
+        
+            weikangs-MBP:~ weikang
+            $ cat .gitconfig
+            [user]
+                    name = weikang9009
+                    email = weikang9009@gmail.com
+        
+        This was after I setup my config with:
+        
+            $ git config --global user.name "weikang9009"
+            $ git config --global user.email weikang9009@gmail.com
+    
+    4.  Editor for git commit messages: Visual Studio (VS) Code
+        
+        (You can also use other editors like [atom](https://flight-manual.atom.io/using-atom/sections/version-control-in-atom/))
+        
+        1.  [download and install VS Code on macOS](https://code.visualstudio.com/Download)
+        
+        2.  Enable VS Code to run from the terminal by typing 'code':
+            
+            1.  Launch VS Code.
+            
+            2.  Open the Command Palette (`Shift+Command+P`) and type 'shell
+                command' to find the Shell Command: Install 'code' command
+                in PATH command.
+            
+            ![img](https://code.visualstudio.com/assets/docs/setup/mac/shell-command.png "img")
+            
+            1.  Restart the terminal for the new $PATH value to take effect.
+                You'll be able to type `code .` in any folder to start
+                editing files in that folder.
+        
+        3.  Setup for git commit messages in the terminal:
+            
+            $ git config &#x2013;global core.editor "code &#x2013;wait"
+        
+        4.  After this check, check your settings:
+            
+                $ pwd
+                /Users/weikang
+                
+                $ cat .gitconfig
+                [user]
+                        name = weikang9009
+                        email = weikang9009@gmail.com
+                [core]
+                        editor = code --wait
 
 
-<a id="org2797ed5"></a>
+<a id="org5e46bb0"></a>
 
 ### Terminal commands
 
@@ -300,7 +363,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="org7472fb5"></a>
+<a id="org8436fc2"></a>
 
 # Repositories
 
@@ -312,7 +375,7 @@ remote repositories generally reside in the "cloud". We start with creating a
 local repository where you will do most of your work. 
 
 
-<a id="org90ccaa5"></a>
+<a id="org04c6663"></a>
 
 ## Local Repositories
 
@@ -342,7 +405,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="org31349e2"></a>
+<a id="org3d4d3d5"></a>
 
 ### Status
 
@@ -362,7 +425,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="org194d679"></a>
+<a id="orgc0fe593"></a>
 
 ### Adding a file
 
@@ -433,7 +496,7 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="orgc3d3c8b"></a>
+<a id="orgae26293"></a>
 
 ### Commiting
 
@@ -489,7 +552,7 @@ good practice to write meaningful commit messages as they can help you remember
 the purpose of the changes you made at that point in the project.
 
 
-<a id="orgf37eaaa"></a>
+<a id="orgde8b006"></a>
 
 ### Edit-add-commit cycle
 
@@ -571,7 +634,7 @@ And, we can always check the log to see our history:
         My first commit.
 
 
-<a id="orgd2449e4"></a>
+<a id="orgb7bd574"></a>
 
 ## Remotes
 
@@ -588,7 +651,7 @@ In order to tap into these benefits we have to first understand how to setup
 authentication with our github account.
 
 
-<a id="orgc87f81c"></a>
+<a id="org8eaf103"></a>
 
 ### Setting up remote authentication
 
@@ -816,14 +879,14 @@ Our first step is to create our ssh keys.
     ![img](figures/commitdiff.png)
 
 
-<a id="org073822e"></a>
+<a id="orgd41f55a"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="orgf19b1f7"></a>
+<a id="org6cc7c5d"></a>
 
 ### Push a local to a new remote
 
@@ -840,12 +903,12 @@ Our first step is to create our ssh keys.
 -   git status
 
 
-<a id="org158287e"></a>
+<a id="orgdd2d2a8"></a>
 
 ### Fork
 
 
-<a id="org1f8d990"></a>
+<a id="orgf3ea629"></a>
 
 ### Cloning
 
