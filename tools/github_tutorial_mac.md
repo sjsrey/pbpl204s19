@@ -126,60 +126,58 @@ for Mac after configuring Windows.
         
         This should open up the console with a git bash shell:
         
-        ![img](figures/gitbashterminal.png)
+        ![img](figures/gitbashterminal_mac.png)
     
     2.  git user config file is:
     
-        `C:\Users\$USER\.gitconfig`
+        `/Users/$USER/.gitconfig`
         
-        where `$USER` is the user name (i.e., serge)
+        where `$USER` is the user name (i.e., weikang)
     
     3.  In git bash:
     
-            serge@DESKTOP-FA80SDI MINGW64 ~
+            weikangs-MBP:~ weikang
             $ cat .gitconfig
             [user]
-                    name = Serge Rey
-                    email = sjsrey@gmail.com
+                    name = weikang9009
+                    email = weikang9009@gmail.com
         
         This was after I setup my config with:
         
-            $ git config --global user.name "Serge Rey"
-            $ git config --global user.email sjsrey@gmail.com
+            $ git config --global user.name "weikang9009"
+            $ git config --global user.email weikang9009@gmail.com
     
-    4.  Editor: Notepad ++
+    4.  Editor for git commit messages: Visual Studio (VS) Code
+
+        (You can also use other editors like [atom](https://flight-manual.atom.io/using-atom/sections/version-control-in-atom/))
     
-        [download and install 32-bit version](https://notepad-plus-plus.org/)
-        used only for git commit messages
-        
-        Setup for git commit messages:
-        
-            git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"
-        
-        After this check, check your settings:
-        
-            $ pwd
-            /c/Users/serge/
+        1. [download and install VS Code on macOS](https://code.visualstudio.com/Download)
+
+        2. Enable VS Code to run from the terminal by typing 'code': 
+
+            1. Launch VS Code.
             
-            serge@DESKTOP-FA80SDI MINGW64 ~
-            $ cat .gitconfig
-            [user]
-                    name = Serge Rey
-                    email = sjsrey@gmail.com
-            [core]
-                    editor = 'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession
+            2. Open the Command Palette (`Shift+Command+P`) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
             
-            serge@DESKTOP-FA80SDI MINGW64 ~
+            ![img](https://code.visualstudio.com/assets/docs/setup/mac/shell-command.png)
+
+            3. Restart the terminal for the new $PATH value to take effect. You'll be able to type `code .` in any folder to start editing files in that folder.
+   
+        3. Setup for git commit messages in the terminal:
+          
+            $ git config --global core.editor "code --wait"
         
-        Or use git itself to check specific settings:
+        4. After this check, check your settings:
         
-            serge@DESKTOP-FA80SDI MINGW64 ~
-            $ git config user.name
-            Serge Rey
+                $ pwd
+                /Users/weikang
             
-            serge@DESKTOP-FA80SDI MINGW64 ~
-            $ git config user.email
-            sjsrey@gmail.com
+                $ cat .gitconfig
+                [user]
+                        name = weikang9009
+                        email = weikang9009@gmail.com
+                [core]
+                        editor = code --wait
 
 <a id="orgd613446"></a>
 
