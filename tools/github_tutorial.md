@@ -1,33 +1,33 @@
 
 # Table of Contents
 
-1.  [Setup](#orgf90f2ed)
-    1.  [Git cli](#org57a8718)
-        1.  [Windows](#org291c08d)
-        2.  [Mac](#orgfcdd7af)
-        3.  [Terminal commands](#org6047343)
-2.  [Repositories](#orgf9ece02)
-    1.  [Local](#orgccb27c8)
-    2.  [Remotes](#org412e1fb)
-        1.  [Setting up remote authentication](#orgd247ab5)
-        2.  [mac](#org8e65bb7)
-        3.  [Push a local to a new remote](#orgd002f17)
-        4.  [Fork](#org80c148b)
-        5.  [Cloning](#org1f91108)
+1.  [Setup](#org7f1fd28)
+    1.  [Git cli](#orgbdc8755)
+        1.  [Windows](#org8e4dd0c)
+        2.  [Mac](#org0bbc50b)
+        3.  [Terminal commands](#org24dcc01)
+2.  [Repositories](#orgda91ab3)
+    1.  [Local](#org9bb03c7)
+    2.  [Remotes](#org0566ad5)
+        1.  [Setting up remote authentication](#orgad3f557)
+        2.  [mac](#orgbd62610)
+        3.  [Push a local to a new remote](#orgd23ef3a)
+        4.  [Fork](#orgc128ced)
+        5.  [Cloning](#org8221807)
 
 
 
-<a id="orgf90f2ed"></a>
+<a id="org7f1fd28"></a>
 
 # Setup
 
 
-<a id="org57a8718"></a>
+<a id="orgbdc8755"></a>
 
 ## Git cli
 
 
-<a id="org291c08d"></a>
+<a id="org8e4dd0c"></a>
 
 ### Windows
 
@@ -74,7 +74,8 @@
         
         After this check, check your settings:
         
-            #$ pwd /c/Users/serge/
+            $ pwd
+            /c/Users/serge/
             
             serge@DESKTOP-FA80SDI MINGW64 ~
             $ cat .gitconfig
@@ -97,12 +98,12 @@
             sjsrey@gmail.com
 
 
-<a id="orgfcdd7af"></a>
+<a id="org0bbc50b"></a>
 
 ### Mac
 
 
-<a id="org6047343"></a>
+<a id="org24dcc01"></a>
 
 ### Terminal commands
 
@@ -113,12 +114,12 @@
 3.  mkdir
 
 
-<a id="orgf9ece02"></a>
+<a id="orgda91ab3"></a>
 
 # Repositories
 
 
-<a id="orgccb27c8"></a>
+<a id="org9bb03c7"></a>
 
 ## Local
 
@@ -139,12 +140,12 @@
 -   git bash for interfacing with git
 
 
-<a id="org412e1fb"></a>
+<a id="org0566ad5"></a>
 
 ## Remotes
 
 
-<a id="orgd247ab5"></a>
+<a id="orgad3f557"></a>
 
 ### Setting up remote authentication
 
@@ -153,14 +154,14 @@
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="org8e65bb7"></a>
+<a id="orgbd62610"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="orgd002f17"></a>
+<a id="orgd23ef3a"></a>
 
 ### Push a local to a new remote
 
@@ -177,12 +178,12 @@
 -   git status
 
 
-<a id="org80c148b"></a>
+<a id="orgc128ced"></a>
 
 ### Fork
 
 
-<a id="org1f91108"></a>
+<a id="org8221807"></a>
 
 ### Cloning
 
