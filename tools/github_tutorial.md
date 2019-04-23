@@ -1,32 +1,32 @@
 
 # Table of Contents
 
-1.  [Setup](#org9e25fdd)
-    1.  [Git bash cli](#org6223612)
-        1.  [Windows](#org22baea4)
-        2.  [Mac](#orgd15f731)
-        3.  [Terminal commands](#org4f01bd2)
-2.  [Repositories](#orgbdcd9fe)
-    1.  [Local Repositories](#orgd36bca4)
-        1.  [Status](#org8c5194d)
-        2.  [Adding a file](#org130127a)
-        3.  [Commiting](#orgd8b046c)
-        4.  [Edit-add-commit cycle](#org6d5e246)
-    2.  [Remotes](#orgcb325fa)
-        1.  [Setting up remote authentication](#org7b0ba7e)
-        2.  [mac](#orgb7ceab5)
-        3.  [Push a local to a new remote](#org2a11151)
-        4.  [Fork](#org35db559)
-        5.  [Cloning](#orge5f576c)
+1.  [Setup](#orgf57eb4d)
+    1.  [Git bash cli](#org816e924)
+        1.  [Windows](#orgc9fecb4)
+        2.  [Mac](#org75389a5)
+        3.  [Terminal commands](#orgb848f33)
+2.  [Repositories](#org9198a33)
+    1.  [Local Repositories](#org5931c12)
+        1.  [Status](#org7562212)
+        2.  [Adding a file](#org9d7bb52)
+        3.  [Commiting](#orge7ca7e4)
+        4.  [Edit-add-commit cycle](#org075a950)
+    2.  [Remotes](#org4984d98)
+        1.  [Setting up remote authentication](#orgda4a46c)
+        2.  [mac](#orgaab42eb)
+        3.  [Push a local to a new remote](#orgab031c9)
+        4.  [Fork](#orgd75695f)
+        5.  [Cloning](#org31757ac)
 
 
 
-<a id="org9e25fdd"></a>
+<a id="orgf57eb4d"></a>
 
 # Setup
 
 
-<a id="org6223612"></a>
+<a id="org816e924"></a>
 
 ## Git bash cli
 
@@ -43,7 +43,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="org22baea4"></a>
+<a id="orgc9fecb4"></a>
 
 ### Windows
 
@@ -114,14 +114,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="orgd15f731"></a>
+<a id="org75389a5"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="org4f01bd2"></a>
+<a id="orgb848f33"></a>
 
 ### Terminal commands
 
@@ -300,7 +300,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="orgbdcd9fe"></a>
+<a id="org9198a33"></a>
 
 # Repositories
 
@@ -312,7 +312,7 @@ remote repositories generally reside in the "cloud". We start with creating a
 local repository where you will do most of your work. 
 
 
-<a id="orgd36bca4"></a>
+<a id="org5931c12"></a>
 
 ## Local Repositories
 
@@ -342,7 +342,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="org8c5194d"></a>
+<a id="org7562212"></a>
 
 ### Status
 
@@ -362,7 +362,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="org130127a"></a>
+<a id="org9d7bb52"></a>
 
 ### Adding a file
 
@@ -433,7 +433,7 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="orgd8b046c"></a>
+<a id="orge7ca7e4"></a>
 
 ### Commiting
 
@@ -489,7 +489,7 @@ good practice to write meaningful commit messages as they can help you remember
 the purpose of the changes you made at that point in the project.
 
 
-<a id="org6d5e246"></a>
+<a id="org075a950"></a>
 
 ### Edit-add-commit cycle
 
@@ -571,7 +571,7 @@ And, we can always check the log to see our history:
         My first commit.
 
 
-<a id="orgcb325fa"></a>
+<a id="org4984d98"></a>
 
 ## Remotes
 
@@ -588,7 +588,7 @@ In order to tap into these benefits we have to first understand how to setup
 authentication with our github account.
 
 
-<a id="org7b0ba7e"></a>
+<a id="orgda4a46c"></a>
 
 ### Setting up remote authentication
 
@@ -612,6 +612,10 @@ Our first step is to create our ssh keys.
     
     ![img](figures/sshgpg.png)
     
+    This will open up a new page:
+    
+    ![img](figures/newsshkey.png)
+    
     Keep the browser on this page, but switch back to your git bash terminal 
     to `cat` your public key file:
     
@@ -632,10 +636,19 @@ Our first step is to create our ssh keys.
     
     Now return to your browser and select `New SSH key`
     
-    ![img](figures/sshgpg.png)
+    ![img](figures/newsshkey.png)
+    
+    which will bring up the form:
+    
+    ![img](figures/newkeyform.png)
     
     Give the key a name in the `Title` entry and paste the contents of the
-    clipboard into the `Key` entry. Then click `Add key`.
+    clipboard into the `Key` entry:
+    
+    ![img](figures/tutorialkey.png)
+    
+    Then click `Add key`. (You may have to enter your github account password at
+    this point).
 
 3.  Configuring ssh-agent
 
@@ -644,14 +657,14 @@ Our first step is to create our ssh keys.
     [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="orgb7ceab5"></a>
+<a id="orgaab42eb"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="org2a11151"></a>
+<a id="orgab031c9"></a>
 
 ### Push a local to a new remote
 
@@ -668,12 +681,12 @@ Our first step is to create our ssh keys.
 -   git status
 
 
-<a id="org35db559"></a>
+<a id="orgd75695f"></a>
 
 ### Fork
 
 
-<a id="orge5f576c"></a>
+<a id="org31757ac"></a>
 
 ### Cloning
 
