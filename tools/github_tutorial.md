@@ -1,32 +1,32 @@
 
 # Table of Contents
 
-1.  [Setup](#orgb495965)
-    1.  [Git bash cli](#org92dde66)
-        1.  [Windows](#org195b4b3)
-        2.  [Mac](#org753a19a)
-        3.  [Terminal commands](#orgeecb265)
-2.  [Repositories](#orgf6a81c7)
-    1.  [Initializing a local git repository](#orgb1dce1a)
-    2.  [Status](#org7be172f)
-    3.  [Adding a file](#org59b762c)
-    4.  [Commiting](#orgd5bcd66)
-    5.  [Local](#orgc2afcec)
-    6.  [Remotes](#org87a5a7c)
-        1.  [Setting up remote authentication](#org48ca4af)
-        2.  [mac](#orga25202a)
-        3.  [Push a local to a new remote](#org701ad36)
-        4.  [Fork](#org54e3860)
-        5.  [Cloning](#org8c16449)
+1.  [Setup](#org85bafa8)
+    1.  [Git bash cli](#org93fe508)
+        1.  [Windows](#orgc70ed3b)
+        2.  [Mac](#orgaa56d1f)
+        3.  [Terminal commands](#org4fcb262)
+2.  [Repositories](#org1c5f821)
+    1.  [Initializing a local git repository](#orgd07c642)
+    2.  [Status](#orgcdd49df)
+    3.  [Adding a file](#org00c3a58)
+    4.  [Commiting](#org96c6965)
+    5.  [Local](#orgec31cc4)
+    6.  [Remotes](#org30630b5)
+        1.  [Setting up remote authentication](#orgd913222)
+        2.  [mac](#org27680c8)
+        3.  [Push a local to a new remote](#org848750e)
+        4.  [Fork](#orgd635671)
+        5.  [Cloning](#org21865c5)
 
 
 
-<a id="orgb495965"></a>
+<a id="org85bafa8"></a>
 
 # Setup
 
 
-<a id="org92dde66"></a>
+<a id="org93fe508"></a>
 
 ## Git bash cli
 
@@ -43,7 +43,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="org195b4b3"></a>
+<a id="orgc70ed3b"></a>
 
 ### Windows
 
@@ -114,14 +114,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org753a19a"></a>
+<a id="orgaa56d1f"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="orgeecb265"></a>
+<a id="org4fcb262"></a>
 
 ### Terminal commands
 
@@ -300,7 +300,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="orgf6a81c7"></a>
+<a id="org1c5f821"></a>
 
 # Repositories
 
@@ -320,7 +320,7 @@ repository for each project, rather than one repository to hold many projects).
     serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial
 
 
-<a id="orgb1dce1a"></a>
+<a id="orgd07c642"></a>
 
 ## Initializing a local git repository
 
@@ -335,7 +335,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="org7be172f"></a>
+<a id="orgcdd49df"></a>
 
 ## Status
 
@@ -355,7 +355,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="org59b762c"></a>
+<a id="org00c3a58"></a>
 
 ## Adding a file
 
@@ -426,7 +426,7 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="orgd5bcd66"></a>
+<a id="org96c6965"></a>
 
 ## Commiting
 
@@ -437,12 +437,12 @@ We use `git commit` for this:
     $ git commit
 
 which should bring up Notepadd++ that we configured above to edit our commit
-message. Below the lines beginning with \`#\` add a commit message so your editor
+message. Below the lines beginning with `#` add a commit message so your editor
 looks like:
 
 ![img](figures/commitmessage.png)
 
-Save the file (`CTRL-s`) and quit notepad++ and you should see:
+Save the file (`<CTRL-s>`) and quit notepad++ and you should see:
 
     serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
     $ git commit
@@ -478,7 +478,7 @@ We can get a look at what git knows about our respository using `git log`:
     $
 
 
-<a id="orgc2afcec"></a>
+<a id="orgec31cc4"></a>
 
 ## Local
 
@@ -499,12 +499,12 @@ We can get a look at what git knows about our respository using `git log`:
 -   git bash for interfacing with git
 
 
-<a id="org87a5a7c"></a>
+<a id="org30630b5"></a>
 
 ## Remotes
 
 
-<a id="org48ca4af"></a>
+<a id="orgd913222"></a>
 
 ### Setting up remote authentication
 
@@ -513,14 +513,14 @@ We can get a look at what git knows about our respository using `git log`:
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="orga25202a"></a>
+<a id="org27680c8"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="org701ad36"></a>
+<a id="org848750e"></a>
 
 ### Push a local to a new remote
 
@@ -537,12 +537,12 @@ We can get a look at what git knows about our respository using `git log`:
 -   git status
 
 
-<a id="org54e3860"></a>
+<a id="orgd635671"></a>
 
 ### Fork
 
 
-<a id="org8c16449"></a>
+<a id="org21865c5"></a>
 
 ### Cloning
 
