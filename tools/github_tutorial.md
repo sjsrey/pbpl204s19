@@ -1,32 +1,32 @@
 
 # Table of Contents
 
-1.  [Setup](#org85bafa8)
-    1.  [Git bash cli](#org93fe508)
-        1.  [Windows](#orgc70ed3b)
-        2.  [Mac](#orgaa56d1f)
-        3.  [Terminal commands](#org4fcb262)
-2.  [Repositories](#org1c5f821)
-    1.  [Initializing a local git repository](#orgd07c642)
-    2.  [Status](#orgcdd49df)
-    3.  [Adding a file](#org00c3a58)
-    4.  [Commiting](#org96c6965)
-    5.  [Local](#orgec31cc4)
-    6.  [Remotes](#org30630b5)
-        1.  [Setting up remote authentication](#orgd913222)
-        2.  [mac](#org27680c8)
-        3.  [Push a local to a new remote](#org848750e)
-        4.  [Fork](#orgd635671)
-        5.  [Cloning](#org21865c5)
+1.  [Setup](#org4d37f10)
+    1.  [Git bash cli](#orgb410853)
+        1.  [Windows](#org1ada8d2)
+        2.  [Mac](#org2a875c4)
+        3.  [Terminal commands](#orgd613446)
+2.  [Repositories](#org48bb7b6)
+    1.  [Initializing a local git repository](#orgaefd3a9)
+    2.  [Status](#orgc838cc5)
+    3.  [Adding a file](#org481a681)
+    4.  [Commiting](#org23f697e)
+    5.  [Local](#org097c928)
+    6.  [Remotes](#org396a913)
+        1.  [Setting up remote authentication](#orga39f28d)
+        2.  [mac](#org4410f6e)
+        3.  [Push a local to a new remote](#org8845c65)
+        4.  [Fork](#org00d0eee)
+        5.  [Cloning](#orged44ac0)
 
 
 
-<a id="org85bafa8"></a>
+<a id="org4d37f10"></a>
 
 # Setup
 
 
-<a id="org93fe508"></a>
+<a id="orgb410853"></a>
 
 ## Git bash cli
 
@@ -43,7 +43,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="orgc70ed3b"></a>
+<a id="org1ada8d2"></a>
 
 ### Windows
 
@@ -114,14 +114,14 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="orgaa56d1f"></a>
+<a id="org2a875c4"></a>
 
 ### Mac
 
 1.  Configuration
 
 
-<a id="org4fcb262"></a>
+<a id="orgd613446"></a>
 
 ### Terminal commands
 
@@ -300,7 +300,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="org1c5f821"></a>
+<a id="org48bb7b6"></a>
 
 # Repositories
 
@@ -320,7 +320,7 @@ repository for each project, rather than one repository to hold many projects).
     serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial
 
 
-<a id="orgd07c642"></a>
+<a id="orgaefd3a9"></a>
 
 ## Initializing a local git repository
 
@@ -335,7 +335,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="orgcdd49df"></a>
+<a id="orgc838cc5"></a>
 
 ## Status
 
@@ -355,7 +355,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="org00c3a58"></a>
+<a id="org481a681"></a>
 
 ## Adding a file
 
@@ -426,7 +426,7 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="org96c6965"></a>
+<a id="org23f697e"></a>
 
 ## Commiting
 
@@ -455,13 +455,13 @@ Save the file (`<CTRL-s>`) and quit notepad++ and you should see:
 
 Recheck the status of the repository:
 
-> serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
-> $ git status
-> On branch master
-> nothing to commit, working tree clean
-> 
-> serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
-> $
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $
 
 So we have nothing to commit, and our working tree is clean. All good.
 
@@ -477,8 +477,12 @@ We can get a look at what git knows about our respository using `git log`:
     serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
     $
 
+Note that our commit message `My first commit` shows up in the log. So it is
+good practice to write meaningful commit messages as they can help you remember
+the purpose of the changes you made at that point in the project.
 
-<a id="orgec31cc4"></a>
+
+<a id="org097c928"></a>
 
 ## Local
 
@@ -499,12 +503,12 @@ We can get a look at what git knows about our respository using `git log`:
 -   git bash for interfacing with git
 
 
-<a id="org30630b5"></a>
+<a id="org396a913"></a>
 
 ## Remotes
 
 
-<a id="orgd913222"></a>
+<a id="orga39f28d"></a>
 
 ### Setting up remote authentication
 
@@ -513,14 +517,14 @@ We can get a look at what git knows about our respository using `git log`:
 [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
 
 
-<a id="org27680c8"></a>
+<a id="org4410f6e"></a>
 
 ### mac
 
 [agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 
-<a id="org848750e"></a>
+<a id="org8845c65"></a>
 
 ### Push a local to a new remote
 
@@ -537,12 +541,12 @@ We can get a look at what git knows about our respository using `git log`:
 -   git status
 
 
-<a id="orgd635671"></a>
+<a id="org00d0eee"></a>
 
 ### Fork
 
 
-<a id="org21865c5"></a>
+<a id="orged44ac0"></a>
 
 ### Cloning
 
