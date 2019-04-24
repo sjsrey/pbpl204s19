@@ -206,7 +206,7 @@ Week 3 April 23
 
 ### Tools and Analysis
 
-- [Git and remote authentication](https://help.github.com/en/articles/connecting-to-github-with-ssh)
+- [Getting Started with git and GitHub](https://github.com/sjsrey/pbpl204s19/blob/master/tools/github_tutorial.md)
 
 
 <h3 id="week4">
