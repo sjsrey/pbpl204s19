@@ -1,28 +1,30 @@
 
 # Table of Contents
 
-1.  [Setup](#orgf4632f8)
-    1.  [Git bash cli](#org69326d2)
-        1.  [Windows](#org6eac92e)
-        2.  [Mac](#orgd19fc10)
-        3.  [Terminal commands](#orgae61aa8)
-2.  [Repositories](#orga8073dc)
-    1.  [Local Repositories](#org38ed838)
-        1.  [Status](#orga5fd347)
-        2.  [Adding a file](#orgb6c5f0c)
-        3.  [Commiting](#orgc8d954e)
-        4.  [Edit-add-commit cycle](#org18f2145)
-    2.  [Remotes](#orgc63e4d8)
-        1.  [Setting up remote authentication](#org422f11f)
+1.  [Setup](#orgfe51dfa)
+    1.  [Git bash cli](#org4f6a4f3)
+        1.  [Windows](#orgfcd9130)
+        2.  [Mac](#org00b93ce)
+        3.  [Terminal commands](#org92ac0e5)
+2.  [Repositories](#org0c5dfcb)
+    1.  [Local Repositories](#orgd850d3b)
+        1.  [Status](#org5d8a877)
+        2.  [Adding a file](#org2a06bb4)
+        3.  [Commiting](#org345e290)
+        4.  [Edit-add-commit cycle](#org6cfb9f6)
+    2.  [Remotes](#org680bcab)
+        1.  [Setting up remote authentication](#org1e9ffd1)
+        2.  [Creating a remote repository](#orgb03c965)
+        3.  [Getting changes from a remote repository](#org6a7ee2a)
 
 
 
-<a id="orgf4632f8"></a>
+<a id="orgfe51dfa"></a>
 
 # Setup
 
 
-<a id="org69326d2"></a>
+<a id="org4f6a4f3"></a>
 
 ## Git bash cli
 
@@ -39,7 +41,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="org6eac92e"></a>
+<a id="orgfcd9130"></a>
 
 ### Windows
 
@@ -110,7 +112,7 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="orgd19fc10"></a>
+<a id="org00b93ce"></a>
 
 ### Mac
 
@@ -180,7 +182,7 @@ for Mac after configuring Windows.
                         editor = code --wait
 
 
-<a id="orgae61aa8"></a>
+<a id="org92ac0e5"></a>
 
 ### Terminal commands
 
@@ -359,7 +361,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="orga8073dc"></a>
+<a id="org0c5dfcb"></a>
 
 # Repositories
 
@@ -371,7 +373,7 @@ remote repositories generally reside in the "cloud". We start with creating a
 local repository where you will do most of your work. 
 
 
-<a id="org38ed838"></a>
+<a id="orgd850d3b"></a>
 
 ## Local Repositories
 
@@ -401,7 +403,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="orga5fd347"></a>
+<a id="org5d8a877"></a>
 
 ### Status
 
@@ -421,7 +423,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="orgb6c5f0c"></a>
+<a id="org2a06bb4"></a>
 
 ### Adding a file
 
@@ -492,7 +494,7 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="orgc8d954e"></a>
+<a id="org345e290"></a>
 
 ### Commiting
 
@@ -548,7 +550,7 @@ good practice to write meaningful commit messages as they can help you remember
 the purpose of the changes you made at that point in the project.
 
 
-<a id="org18f2145"></a>
+<a id="org6cfb9f6"></a>
 
 ### Edit-add-commit cycle
 
@@ -630,7 +632,7 @@ And, we can always check the log to see our history:
         My first commit.
 
 
-<a id="orgc63e4d8"></a>
+<a id="org680bcab"></a>
 
 ## Remotes
 
@@ -647,7 +649,7 @@ In order to tap into these benefits we have to first understand how to setup
 authentication with our github account.
 
 
-<a id="org422f11f"></a>
+<a id="org1e9ffd1"></a>
 
 ### Setting up remote authentication
 
@@ -793,142 +795,148 @@ Our first step is to create our ssh keys.
     On a Mac, there are a few additional steps to take if these instructions here
     do not work. See [the mac specific instructions on github.](<https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent>)
 
-4.  Creating a Remote Repository
 
-    We are set to connect to a remote, so let's create our own on github for the
-    purposes of this tutorial. On your github account click the dropdown next to
-    your profile and select `New Repository`:
-    
-    ![img](figures/newrepo.png)
-    
-    This will bring up a new dialog. We will name the repository `gittest` and make
-    it `private` so only you can see it. We could make it public but since this is
-    early days we might not want to share our files:
-    
-    ![img](figures/gittest.png)
-    
-    Once you are happy, select `Create repository` and this will bring up
-    instructions on options for interacting with this new repository:
-    
-    ![img](figures/gitremote.png)
-    
-    We have already created our *local respository* so we want to follow the second
-    set of instructions to get our work up to the remote.
-    
-    First, we add a remote to our local repository so git knows about it (make
-    sure you are in the repository directory):
-    
-        $ ls
-        README.md
-        
-        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
-        $ git status
-        On branch master
-        nothing to commit, working tree clean
-        
-        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
-        $ git remote add origin git@github.com:sjsrey/gittest.git
-        
-        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
-        $ git remote -v
-        origin  git@github.com:sjsrey/gittest.git (fetch)
-        origin  git@github.com:sjsrey/gittest.git (push)
-    
-    Next, we push our changes up to this remote:
-    
-        $ git push -u origin master
-        Enumerating objects: 6, done.
-        Counting objects: 100% (6/6), done.
-        Delta compression using up to 8 threads
-        Compressing objects: 100% (4/4), done.
-        Writing objects: 100% (6/6), 545 bytes | 109.00 KiB/s, done.
-        Total 6 (delta 1), reused 0 (delta 0)
-        remote: Resolving deltas: 100% (1/1), done.
-        To github.com:sjsrey/gittest.git
-         * [new branch]      master -> master
-        Branch 'master' set up to track remote branch 'master' from 'origin'.
-        
-        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
-    
-    Congratulations, you have just pushed to your first remote!
-    
-    To see the results of your work, go back to github and click the `gittest`
-    repos name at the top of the file:
-    
-    ![img](figures/gittestselect.png)
-    
-    This gets you to the home page on github for your repository:
-    
-    ![img](figures/gittesthome.png)
-    
-    Select the `Commits` link:
-    
-    ![img](figures/gitcommits.png)
-    
-    and you will see the commits that we made locally. This all gets pushed up to
-    the remote so your entire history will be saved both locally and remotely.
-    
-    We can explore individual commits by clicking on the "hash":
-    
-    ![img](figures/githash.png)
-    
-    This shows us a side-by-side comparison of the file involved in this commit,
-    left is before the commit, right is after the commit. Green indicates stuff was added:
-    
-    ![img](figures/commitdiff.png)
+<a id="orgb03c965"></a>
 
-5.  Getting changes from a remotely
+### Creating a remote repository
 
-    We can actually edit files remotely on github, although this is generally not
-    the most efficient way to do things.  But, we will do so here to see how you
-    can pull down changes from a remote repository to keep you local repository up
-    to date. This is the way collaborative work happens on github.
+We are set to connect to a remote, so let's create our own on github for the
+purposes of this tutorial. On your github account click the dropdown next to
+your profile and select `New Repository`:
+
+![img](figures/newrepo.png)
+
+This will bring up a new dialog. We will name the repository `gittest` and make
+it `private` so only you can see it. We could make it public but since this is
+early days we might not want to share our files:
+
+![img](figures/gittest.png)
+
+Once you are happy, select `Create repository` and this will bring up
+instructions on options for interacting with this new repository:
+
+![img](figures/gitremote.png)
+
+We have already created our *local respository* so we want to follow the second
+set of instructions to get our work up to the remote.
+
+First, we add a remote to our local repository so git knows about it (make
+sure you are in the repository directory):
+
+    $ ls
+    README.md
     
-    Go back to the github landing page for your new repository and click the pencil
-    icon for the README.md file:
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
     
-    ![img](figures/githubedit.png)
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $ git remote add origin git@github.com:sjsrey/gittest.git
     
-    Then edit the file to add some changes:
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    $ git remote -v
+    origin  git@github.com:sjsrey/gittest.git (fetch)
+    origin  git@github.com:sjsrey/gittest.git (push)
+
+Next, we push our changes up to this remote:
+
+    $ git push -u origin master
+    Enumerating objects: 6, done.
+    Counting objects: 100% (6/6), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (4/4), done.
+    Writing objects: 100% (6/6), 545 bytes | 109.00 KiB/s, done.
+    Total 6 (delta 1), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (1/1), done.
+    To github.com:sjsrey/gittest.git
+     * [new branch]      master -> master
+    Branch 'master' set up to track remote branch 'master' from 'origin'.
     
-    ![img](figures/githubedit1.png)
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+
+Congratulations, you have just pushed to your first remote!
+
+To see the results of your work, go back to github and click the `gittest`
+repos name at the top of the file:
+
+![img](figures/gittestselect.png)
+
+This gets you to the home page on github for your repository:
+
+![img](figures/gittesthome.png)
+
+Select the `Commits` link:
+
+![img](figures/gitcommits.png)
+
+and you will see the commits that we made locally. This all gets pushed up to
+the remote so your entire history will be saved both locally and remotely.
+
+We can explore individual commits by clicking on the "hash":
+
+![img](figures/githash.png)
+
+This shows us a side-by-side comparison of the file involved in this commit,
+left is before the commit, right is after the commit. Green indicates stuff was added:
+
+![img](figures/commitdiff.png)
+
+
+<a id="org6a7ee2a"></a>
+
+### Getting changes from a remote repository
+
+We can actually edit files remotely on github, although this is generally not
+the most efficient way to do things.  But, we will do so here to see how you
+can pull down changes from a remote repository to keep you local repository up
+to date. This is the way collaborative work happens on github.
+
+Go back to the github landing page for your new repository and click the pencil
+icon for the README.md file:
+
+![img](figures/githubedit.png)
+
+Then edit the file to add some changes:
+
+![img](figures/githubedit1.png)
+
+You can add a commit message at the bottom of the form and then click `Commit
+Changes`.
+
+So these changes are now committed on the remote, but we want to get them
+locally.
+
+Go to your bash shell and pull the changes down:
+
+    $ git pull origin master
+    remote: Enumerating objects: 5, done.
+    remote: Counting objects: 100% (5/5), done.
+    remote: Compressing objects: 100% (2/2), done.
+    remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (3/3), done.
+    From github.com:sjsrey/gittest
+     * branch            master     -> FETCH_HEAD
+       27388d9..3ffdbc2  master     -> origin/master
+    Updating 27388d9..3ffdbc2
+    Fast-forward
+     README.md | 4 ++++
+     1 file changed, 4 insertions(+)
     
-    You can add a commit message at the bottom of the form and then click `Commit
-    Changes`.
+    serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+
+We see a message that the README.md file has changed. If we `cat` it we can see
+the changes locally:
+
+    $ cat README.md
+    # Git and github tutorial
     
-    So these changes are now committed on the remote, but we want to get them
-    locally.
+    Notes on using git and github for PBPL204
     
-    Go to your bash shell and pull the changes down:
+    ## Why git and github?
+    Here we outline why we are learning git and github.
     
-        $ git pull origin master
-        remote: Enumerating objects: 5, done.
-        remote: Counting objects: 100% (5/5), done.
-        remote: Compressing objects: 100% (2/2), done.
-        remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
-        Unpacking objects: 100% (3/3), done.
-        From github.com:sjsrey/gittest
-         * branch            master     -> FETCH_HEAD
-           27388d9..3ffdbc2  master     -> origin/master
-        Updating 27388d9..3ffdbc2
-        Fast-forward
-         README.md | 4 ++++
-         1 file changed, 4 insertions(+)
-        
-        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
     
-    We see a message that the README.md file has changed. If we `cat` it we can see
-    the changes locally:
-    
-        $ cat README.md
-        # Git and github tutorial
-        
-        Notes on using git and github for PBPL204
-        
-        ## Why git and github?
-        Here we outline why we are learning git and github.
-        
-        
-        ## Adding changes
-        Here we added a change on github (i.e., our remote repository).
+    ## Adding changes
+    Here we added a change on github (i.e., our remote repository).
 
