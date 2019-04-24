@@ -1,30 +1,38 @@
 
 # Table of Contents
 
-1.  [Setup](#orgfe51dfa)
-    1.  [Git bash cli](#org4f6a4f3)
-        1.  [Windows](#orgfcd9130)
-        2.  [Mac](#org00b93ce)
-        3.  [Terminal commands](#org92ac0e5)
-2.  [Repositories](#org0c5dfcb)
-    1.  [Local Repositories](#orgd850d3b)
-        1.  [Status](#org5d8a877)
-        2.  [Adding a file](#org2a06bb4)
-        3.  [Commiting](#org345e290)
-        4.  [Edit-add-commit cycle](#org6cfb9f6)
-    2.  [Remotes](#org680bcab)
-        1.  [Setting up remote authentication](#org1e9ffd1)
-        2.  [Creating a remote repository](#orgb03c965)
-        3.  [Getting changes from a remote repository](#org6a7ee2a)
+1.  [Introduction to git and github](#org80a6794)
+2.  [Setup](#org2306092)
+    1.  [Git bash cli](#orga27df6b)
+        1.  [Windows](#org2c3f39b)
+        2.  [Mac](#orga9019d9)
+        3.  [Terminal commands](#orgc31bfe8)
+3.  [Repositories](#org283884d)
+    1.  [Local Repositories](#orge0dc340)
+        1.  [Status](#orgdd7b19f)
+        2.  [Adding a file](#org86986ae)
+        3.  [Commiting](#org104f195)
+        4.  [Edit-add-commit cycle](#org7505c50)
+    2.  [Remotes](#orgfd52e2e)
+        1.  [Setting up remote authentication](#orgb42d0ea)
+        2.  [Creating a remote repository](#orgf8d7194)
+        3.  [Getting changes from a remote repository](#orgfed59e8)
 
 
 
-<a id="orgfe51dfa"></a>
+<a id="org80a6794"></a>
+
+# Introduction to git and github
+
+We will be using git and github for the course, both to build the course documents as well as to collaborate on the course exercises. Thus, learning these tools is vital to your success in this course, and these skill sets are going to be increasingly important in regional analysis and policy circles over time.
+
+
+<a id="org2306092"></a>
 
 # Setup
 
 
-<a id="org4f6a4f3"></a>
+<a id="orga27df6b"></a>
 
 ## Git bash cli
 
@@ -41,7 +49,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="orgfcd9130"></a>
+<a id="org2c3f39b"></a>
 
 ### Windows
 
@@ -112,7 +120,7 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org00b93ce"></a>
+<a id="orga9019d9"></a>
 
 ### Mac
 
@@ -182,7 +190,7 @@ for Mac after configuring Windows.
                         editor = code --wait
 
 
-<a id="org92ac0e5"></a>
+<a id="orgc31bfe8"></a>
 
 ### Terminal commands
 
@@ -361,7 +369,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="org0c5dfcb"></a>
+<a id="org283884d"></a>
 
 # Repositories
 
@@ -373,7 +381,7 @@ remote repositories generally reside in the "cloud". We start with creating a
 local repository where you will do most of your work. 
 
 
-<a id="orgd850d3b"></a>
+<a id="orge0dc340"></a>
 
 ## Local Repositories
 
@@ -403,7 +411,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="org5d8a877"></a>
+<a id="orgdd7b19f"></a>
 
 ### Status
 
@@ -423,7 +431,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="org2a06bb4"></a>
+<a id="org86986ae"></a>
 
 ### Adding a file
 
@@ -494,7 +502,7 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="org345e290"></a>
+<a id="org104f195"></a>
 
 ### Commiting
 
@@ -550,7 +558,7 @@ good practice to write meaningful commit messages as they can help you remember
 the purpose of the changes you made at that point in the project.
 
 
-<a id="org6cfb9f6"></a>
+<a id="org7505c50"></a>
 
 ### Edit-add-commit cycle
 
@@ -632,7 +640,7 @@ And, we can always check the log to see our history:
         My first commit.
 
 
-<a id="org680bcab"></a>
+<a id="orgfd52e2e"></a>
 
 ## Remotes
 
@@ -649,7 +657,7 @@ In order to tap into these benefits we have to first understand how to setup
 authentication with our github account.
 
 
-<a id="org1e9ffd1"></a>
+<a id="orgb42d0ea"></a>
 
 ### Setting up remote authentication
 
@@ -796,7 +804,7 @@ Our first step is to create our ssh keys.
     do not work. See [the mac specific instructions on github.](<https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent>)
 
 
-<a id="orgb03c965"></a>
+<a id="orgf8d7194"></a>
 
 ### Creating a remote repository
 
@@ -883,7 +891,7 @@ left is before the commit, right is after the commit. Green indicates stuff was 
 ![img](figures/commitdiff.png)
 
 
-<a id="org6a7ee2a"></a>
+<a id="orgfed59e8"></a>
 
 ### Getting changes from a remote repository
 
