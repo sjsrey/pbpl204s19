@@ -1,32 +1,28 @@
 
 # Table of Contents
 
-1.  [Setup](#orgd74c520)
-    1.  [Git bash cli](#orgabdc0bd)
-        1.  [Windows](#orgeb40090)
-        2.  [Mac](#org1670138)
-        3.  [Terminal commands](#org5e46bb0)
-2.  [Repositories](#org8436fc2)
-    1.  [Local Repositories](#org04c6663)
-        1.  [Status](#org3d4d3d5)
-        2.  [Adding a file](#orgc0fe593)
-        3.  [Commiting](#orgae26293)
-        4.  [Edit-add-commit cycle](#orgde8b006)
-    2.  [Remotes](#orgb7bd574)
-        1.  [Setting up remote authentication](#org8eaf103)
-        2.  [mac](#orgd41f55a)
-        3.  [Push a local to a new remote](#org6cc7c5d)
-        4.  [Fork](#orgdd2d2a8)
-        5.  [Cloning](#orgf3ea629)
+1.  [Setup](#orgf4632f8)
+    1.  [Git bash cli](#org69326d2)
+        1.  [Windows](#org6eac92e)
+        2.  [Mac](#orgd19fc10)
+        3.  [Terminal commands](#orgae61aa8)
+2.  [Repositories](#orga8073dc)
+    1.  [Local Repositories](#org38ed838)
+        1.  [Status](#orga5fd347)
+        2.  [Adding a file](#orgb6c5f0c)
+        3.  [Commiting](#orgc8d954e)
+        4.  [Edit-add-commit cycle](#org18f2145)
+    2.  [Remotes](#orgc63e4d8)
+        1.  [Setting up remote authentication](#org422f11f)
 
 
 
-<a id="orgd74c520"></a>
+<a id="orgf4632f8"></a>
 
 # Setup
 
 
-<a id="orgabdc0bd"></a>
+<a id="org69326d2"></a>
 
 ## Git bash cli
 
@@ -43,7 +39,7 @@ We are going to use git-bash as our CLI client on Windows. We then will setup a 
 for Mac after configuring Windows. 
 
 
-<a id="orgeb40090"></a>
+<a id="org6eac92e"></a>
 
 ### Windows
 
@@ -114,7 +110,7 @@ for Mac after configuring Windows.
             sjsrey@gmail.com
 
 
-<a id="org1670138"></a>
+<a id="orgd19fc10"></a>
 
 ### Mac
 
@@ -184,7 +180,7 @@ for Mac after configuring Windows.
                         editor = code --wait
 
 
-<a id="org5e46bb0"></a>
+<a id="orgae61aa8"></a>
 
 ### Terminal commands
 
@@ -363,7 +359,7 @@ Some common bash commands to become familiar with include:
             $
 
 
-<a id="org8436fc2"></a>
+<a id="orga8073dc"></a>
 
 # Repositories
 
@@ -375,7 +371,7 @@ remote repositories generally reside in the "cloud". We start with creating a
 local repository where you will do most of your work. 
 
 
-<a id="org04c6663"></a>
+<a id="org38ed838"></a>
 
 ## Local Repositories
 
@@ -405,7 +401,7 @@ The directory `.git` is where all the bookkeeping is done by git. We need not
 go in there, but it is good to know what it is.
 
 
-<a id="org3d4d3d5"></a>
+<a id="orga5fd347"></a>
 
 ### Status
 
@@ -425,7 +421,7 @@ The other output from the `status` command is that we have nothing to commit so
 we may want to add files to our project.
 
 
-<a id="orgc0fe593"></a>
+<a id="orgb6c5f0c"></a>
 
 ### Adding a file
 
@@ -496,7 +492,7 @@ those changes have not yet been commited to the repository.
 The stage allows us to make a bunch of changes to a file before we do a commit.
 
 
-<a id="orgae26293"></a>
+<a id="orgc8d954e"></a>
 
 ### Commiting
 
@@ -552,7 +548,7 @@ good practice to write meaningful commit messages as they can help you remember
 the purpose of the changes you made at that point in the project.
 
 
-<a id="orgde8b006"></a>
+<a id="org18f2145"></a>
 
 ### Edit-add-commit cycle
 
@@ -634,7 +630,7 @@ And, we can always check the log to see our history:
         My first commit.
 
 
-<a id="orgb7bd574"></a>
+<a id="orgc63e4d8"></a>
 
 ## Remotes
 
@@ -651,7 +647,7 @@ In order to tap into these benefits we have to first understand how to setup
 authentication with our github account.
 
 
-<a id="org8eaf103"></a>
+<a id="org422f11f"></a>
 
 ### Setting up remote authentication
 
@@ -793,6 +789,9 @@ Our first step is to create our ssh keys.
     ![img](figures/sshidentity.png)
     
     Further Reading: [auto launching agent on git bash](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
+    
+    On a Mac, there are a few additional steps to take if these instructions here
+    do not work. See [the mac specific instructions on github.](<https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent>)
 
 4.  Creating a Remote Repository
 
@@ -878,37 +877,58 @@ Our first step is to create our ssh keys.
     
     ![img](figures/commitdiff.png)
 
+5.  Getting changes from a remotely
 
-<a id="orgd41f55a"></a>
-
-### mac
-
-[agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
-
-
-<a id="org6cc7c5d"></a>
-
-### Push a local to a new remote
-
--   create a remote on github
--   see instructions about pushing a local repositor
--   cut and paste instructions
--   git remote -v
--   git push -u origin master
--   checkout remote repos
--   
-
-
--   make a change on the web site
--   git status
-
-
-<a id="orgdd2d2a8"></a>
-
-### Fork
-
-
-<a id="orgf3ea629"></a>
-
-### Cloning
+    We can actually edit files remotely on github, although this is generally not
+    the most efficient way to do things.  But, we will do so here to see how you
+    can pull down changes from a remote repository to keep you local repository up
+    to date. This is the way collaborative work happens on github.
+    
+    Go back to the github landing page for your new repository and click the pencil
+    icon for the README.md file:
+    
+    ![img](figures/githubedit.png)
+    
+    Then edit the file to add some changes:
+    
+    ![img](figures/githubedit1.png)
+    
+    You can add a commit message at the bottom of the form and then click `Commit
+    Changes`.
+    
+    So these changes are now committed on the remote, but we want to get them
+    locally.
+    
+    Go to your bash shell and pull the changes down:
+    
+        $ git pull origin master
+        remote: Enumerating objects: 5, done.
+        remote: Counting objects: 100% (5/5), done.
+        remote: Compressing objects: 100% (2/2), done.
+        remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+        Unpacking objects: 100% (3/3), done.
+        From github.com:sjsrey/gittest
+         * branch            master     -> FETCH_HEAD
+           27388d9..3ffdbc2  master     -> origin/master
+        Updating 27388d9..3ffdbc2
+        Fast-forward
+         README.md | 4 ++++
+         1 file changed, 4 insertions(+)
+        
+        serge@DESKTOP-FA80SDI MINGW64 /c/Users/serge/Documents/courses/pbpl204w19/gittutorial (master)
+    
+    We see a message that the README.md file has changed. If we `cat` it we can see
+    the changes locally:
+    
+        $ cat README.md
+        # Git and github tutorial
+        
+        Notes on using git and github for PBPL204
+        
+        ## Why git and github?
+        Here we outline why we are learning git and github.
+        
+        
+        ## Adding changes
+        Here we added a change on github (i.e., our remote repository).
 
