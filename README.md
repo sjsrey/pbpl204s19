@@ -125,12 +125,12 @@ Conduct](https://scipy2017.scipy.org/ehome/220975/493434/).
 |    1 | 4/09 | [Regions: Concepts and Policies](#week1)         |              |
 |    2 | 4/16 | [Economic Base Theory and Models](#week2)        |              |
 |    3 | 4/23 | [Git and Github](#week3)                         | 1 Out        |
-|    4 | 4/30 | [Diversification and Shift-Share](#week4)        |              |
-|    5 | 5/07 | [Input-Output Accounts and Theory](#week5)       | 1 Due, 2 Out |
-|    6 | 5/14 | [Regional Input-Output Analysis](#week6)         |              |
-|    7 | 5/21 | [Regional Demographic Data and Accounts](#week7) | 2 Due, 3 Out |
-|    8 | 5/28 | [Regional Demographic Forecasting](#week8)       |              |
-|    9 | 6/04 | [Jobs-Housing Balance](#week9)                   | 3 Due, 4 Out |
+|    4 | 4/30 | [Economic Base Exercise](#week4)                 |              |
+|    5 | 5/07 | [Diversification and Shift-Share](#week5)        | 2 Out        |
+|    6 | 5/14 | [Input-Output Accounts and Theory](#week6)       | 1 Due,       |
+|    7 | 5/21 | [Regional Input-Output Analysis](#week7)         | 2 Due, 3 Out |
+|    8 | 5/28 | [Regional Demographic Data and Accounts](#week8) |              |
+|    9 | 6/04 | [Regional Demographic Forecasting](#week9)       | 3 Due, 4 Out |
 |   10 | 6/11 | Final Exam Week                                  | 4 Due        |
 
 
@@ -210,7 +210,22 @@ Week 3 April 23
 
 
 <h3 id="week4">
-Week 4 April 30 
+Week 4 April 30
+</h3>
+
+### Readings/Resources
+
+- [Chacon, S. and B. Straub (2014) Pro Git](https://git-scm.com/book/en/v2). Chapters 1 and 2.
+- If you are using Windows, also read the [Git-bash Tutorial](https://www.atlassian.com/git/tutorials/git-bash)
+- If you are on a Mac, also read [Setting Up Github on your Mac](http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/)
+
+### Tools and Analysis
+
+- [Getting Started with git and GitHub](https://github.com/sjsrey/pbpl204s19/blob/master/tools/github_tutorial.md)
+
+
+<h3 id="week5">
+Week 5 May 7
 </h3>
 
 #### Readings/Resources
