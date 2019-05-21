@@ -256,3 +256,22 @@ Week 5 May 7
 - Anaconda Python Distribution
 - Git: pull requests
 
+
+<h3 id="week6">
+Week 6 May 14 
+</h3>
+
+
+#### Tools and Analysis
+
+- [Exercise 2 hints](exercises/02/ex02_hints.ipynb)
+
+<h3 id="week7">
+Week 6 May 21 
+</h3>
+
+
+#### Tools and Analysis
+
+- Growth and Diversification: Regression Analysis
+- [Exercise 2 hints](exercises/02/ex02_hints.ipynb)
