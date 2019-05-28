@@ -1,0 +1,89 @@
+* Git setup on Mac
+  :PROPERTIES:
+  :CUSTOM_ID: git-setup-on-mac
+  :END:
+
+*** Mac
+    :PROPERTIES:
+    :CUSTOM_ID: mac
+    :END:
+
+1. Configuration
+
+   1. Start Mac CLI:
+      [[https://support.apple.com/guide/terminal/welcome/mac][Terminal
+      app]]
+
+      #+CAPTION: img
+      [[file:figures/gitbashstart_mac.png]]
+
+      This should open up the console with a git bash shell:
+
+      #+CAPTION: img
+      [[file:figures/gitbashterminal_mac.png]]
+
+   2. git user config file is:
+
+      =/Users/$USER/.gitconfig=
+
+      where =$USER= is the user name (i.e., weikang)
+
+   3. In git bash:
+
+      #+BEGIN_EXAMPLE
+          weikangs-MBP:~ weikang
+          $ cat .gitconfig
+          [user]
+                  name = weikang9009
+                  email = weikang9009@gmail.com
+      #+END_EXAMPLE
+
+      This was after I setup my config with:
+
+      #+BEGIN_EXAMPLE
+          $ git config --global user.name "weikang9009"
+          $ git config --global user.email weikang9009@gmail.com
+      #+END_EXAMPLE
+
+   4. Editor for git commit messages: Visual Studio (VS) Code
+
+      (You can also use other editors like
+      [[https://flight-manual.atom.io/using-atom/sections/version-control-in-atom/][atom]])
+
+      1. [[https://code.visualstudio.com/Download][download and install
+         VS Code on macOS]]
+
+      2. Enable VS Code to run from the terminal by typing 'code':
+
+         1. Launch VS Code.
+
+         2. Open the Command Palette (=Shift+Command+P=) and type 'shell
+            command' to find the Shell Command: Install 'code' command
+            in PATH command.
+
+         #+CAPTION: img
+         [[https://code.visualstudio.com/assets/docs/setup/mac/shell-command.png]]
+
+         3. Restart the terminal for the new $PATH value to take effect.
+            You'll be able to type =code .= in any folder to start
+            editing files in that folder.
+
+      3. Setup for git commit messages in the terminal:
+
+         $ git config --global core.editor "code --wait"
+
+      4. After this check, check your settings:
+
+         #+BEGIN_EXAMPLE
+              $ pwd
+              /Users/weikang
+
+              $ cat .gitconfig
+              [user]
+                      name = weikang9009
+                      email = weikang9009@gmail.com
+              [core]
+                      editor = code --wait
+         #+END_EXAMPLE
+
+
