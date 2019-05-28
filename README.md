@@ -120,19 +120,19 @@ Conduct](https://scipy2017.scipy.org/ehome/220975/493434/).
 
 ## Schedule Summary (Planned)
 
-| Week | Date | Topic                                          | Exercises    |
-|------|------|------------------------------------------------|--------------|
-|    0 | 4/02 | [Introduction](#week0)                         |              |
-|    1 | 4/09 | [Regions: Concepts and Policies](#week1)       |              |
-|    2 | 4/16 | [Economic Base Theory and Models](#week2)      |              |
-|    3 | 4/23 | [Git and Github](#week3)                       | 1 Out        |
-|    4 | 4/30 | [Economic Base Exercise](#week4)               |              |
-|    5 | 5/07 | [Bifurcation Methods](#week5)                  | 2 Out        |
-|    6 | 5/14 | [Diversification and Growth](#week6)           | 1 Due        |
-|    7 | 5/21 | [Imputation and Regression](#week7)            |              |
-|    8 | 5/28 | [Regions revisited: Mapping and Scale](#week8) | 2 Due, 3 Out |
-|    9 | 6/04 | [Next Steps](#week9)                           |              |
-|   10 | 6/11 | Final Exam Week                                | 3 Due        |
+| Week | Date | Topic                                          | Exercises            |
+|------|------|------------------------------------------------|----------------------|
+|    0 | 4/02 | [Introduction](#week0)                         |                      |
+|    1 | 4/09 | [Regions: Concepts and Policies](#week1)       |                      |
+|    2 | 4/16 | [Economic Base Theory and Models](#week2)      |                      |
+|    3 | 4/23 | [Git and Github](#week3)                       | 1 Out                |
+|    4 | 4/30 | [Economic Base Exercise](#week4)               |                      |
+|    5 | 5/07 | [Bifurcation Methods](#week5)                  | 2 Out                |
+|    6 | 5/14 | [Diversification and Growth](#week6)           | 1 Due                |
+|    7 | 5/21 | [Imputation and Regression](#week7)            |                      |
+|    8 | 5/28 | [Regions revisited: Mapping and Scale](#week8) | 2 Due, [3 Out](#ex3) |
+|    9 | 6/04 | [Next Steps](#week9)                           |                      |
+|   10 | 6/11 | Final Exam Week                                | 3 Due                |
 
 ## Schedule Detailed (Planned)
 
@@ -261,3 +261,15 @@ Week 7 May 21
 
 - Growth and Diversification: Imputation and Regression Analysis
 - [Exercise 2 hints](exercises/02/e02_hints.ipynb)
+
+
+<h3 id="week8">
+Week 8 May 28 
+</h3>
+
+
+#### Mapping for regional analysis
+
+- [Mapping](https://github.com/sjsrey/pbpl204s19/blob/master/exercises/03/mapping.ipynb)
+- [Joins ](https://github.com/sjsrey/pbpl204s19/blob/master/exercises/03/joins.ipynb )
+- [Data Cleaning ](https://github.com/sjsrey/pbpl204s19/blob/master/exercises/03/ex3_hints_DataCleaning.ipynb)
