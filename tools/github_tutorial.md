@@ -169,13 +169,13 @@ for Mac after configuring Windows.
             
             ![img](https://code.visualstudio.com/assets/docs/setup/mac/shell-command.png "img")
             
-            1.  Restart the terminal for the new $PATH value to take effect.
+            3.  Restart the terminal for the new $PATH value to take effect.
                 You'll be able to type `code .` in any folder to start
                 editing files in that folder.
         
         3.  Setup for git commit messages in the terminal:
             
-            $ git config &#x2013;global core.editor "code &#x2013;wait"
+            $ git config --global core.editor "code --wait"
         
         4.  After this check, check your settings:
             
