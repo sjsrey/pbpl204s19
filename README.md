@@ -131,7 +131,7 @@ Conduct](https://scipy2017.scipy.org/ehome/220975/493434/).
 |    6 | 5/14 | [Diversification and Growth](#week6)           | 1 Due                |
 |    7 | 5/21 | [Imputation and Regression](#week7)            |                      |
 |    8 | 5/28 | [Regions revisited: Mapping and Scale](#week8) | 2 Due, [3 Out](#ex3) |
-|    9 | 6/04 | [Next Steps](#week9)                           |                      |
+|    9 | 6/04 | [Studio: Ex 3](#week9)                         |                      |
 |   10 | 6/11 | Final Exam Week                                | 3 Due                |
 
 ## Schedule Detailed (Planned)
@@ -272,4 +272,11 @@ Week 8 May 28
 
 - [Mapping](https://github.com/sjsrey/pbpl204s19/blob/master/exercises/03/mapping.ipynb)
 - [Joins ](https://github.com/sjsrey/pbpl204s19/blob/master/exercises/03/joins.ipynb )
+
+<h3 id="week9">
+Week 9 June  04 
+</h3>
+
+#### Exercise 3 Work Studio
 - [Data Cleaning ](https://github.com/sjsrey/pbpl204s19/blob/master/exercises/03/ex3_hints_DataCleaning.ipynb)
+- [Aggregation](https://github.com/sjsrey/pbpl204s19/blob/master/exercises/03/aggregation.ipynb)
